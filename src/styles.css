@@ -308,6 +308,22 @@
   background: var(--secondary-container);
   color: var(--secondary);
 }
+.certificate-show-all-button {
+  border: 1px solid #000;
+  background-color: #000;
+  color: #fff;
+}
+.certificate-show-all-button:hover {
+  background-color: #262626;
+}
+.dark .certificate-show-all-button {
+  border-color: #fff;
+  background-color: #fff;
+  color: #000;
+}
+.dark .certificate-show-all-button:hover {
+  background-color: #e5e5e5;
+}
 #certificates .p-6 > div > .flex.items-center.justify-between {
   flex-wrap: wrap;
   gap: 8px;

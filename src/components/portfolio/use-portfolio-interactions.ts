@@ -4,11 +4,9 @@ import { projectData } from "./project-data";
 const active = "bg-primary text-on-primary";
 const inactive = "bg-surface-card text-on-surface-variant";
 const translations: Record<string, string> = {
-  "Membangun Solusi Digital yang": "Building Digital Solutions that are",
-  Efisien: "Efficient",
-  ", Terstruktur & Bernilai Nyata.": ", Structured & Truly Valuable.",
+  "Haikal Tirta Albanna": "Haikal Tirta Albanna",
   "Lihat Proyek": "View Projects",
-  "Minta CV": "Request CV",
+  "Unduh CV": "Download CV",
   "01. TENTANG SAYA": "01. ABOUT ME",
   "TENTANG SAYA": "ABOUT ME",
   "Latar Belakang & Filosofi Rekayasa": "Background & Engineering Philosophy",
@@ -26,14 +24,13 @@ const translations: Record<string, string> = {
   "Pesan Lengkap *": "Message *",
   "Lihat Dokumen Lengkap": "View Full Document",
   Tutup: "Close",
-  "Mendedikasikan keterampilan teknologi untuk efisiensi sistem nyata.":
-    "Dedicating technical expertise to efficient real-world systems.",
+  "Mengubah ide menjadi aplikasi yang bermanfaat.": "Turning ideas into useful applications.",
   "Terbuka untuk peluang kerja full-time, kontrak, maupun kemitraan proyek sistem.":
     "Open to full-time roles, contracts, and project partnerships.",
   "Implementasi nyata penyelesaian masalah data & transformasi digital instansi.":
     "Real-world solutions for data challenges and institutional digital transformation.",
-  "Selamat datang di portofolio pribadi saya! Saya merupakan seorang Full-Stack Developer dan Data Analyst yang berfokus pada pengembangan sistem web terintegrasi, manajemen basis data, serta transformasi digital institusi. Siap berkontribusi dalam tim engineering profesional.":
-    "Welcome to my portfolio! I’m a Full-Stack Developer and Data Analyst focused on integrated web systems, database management, and institutional digital transformation. Ready to contribute to a professional engineering team.",
+  "Selamat datang di portofolio pribadi saya! Saya merupakan seorang Full-Stack Developer dan Data Analyst yang memiliki ketertarikan dalam mengembangkan solusi digital yang fungsional dan inovatif. Melalui portofolio ini, Anda dapat melihat berbagai proyek yang telah saya kerjakan, mulai dari website, landing page, hingga aplikasi berbasis web dengan pengembangan frontend maupun backend. Setiap proyek dirancang dengan mengutamakan kualitas, tampilan yang responsif, serta pengalaman pengguna yang optimal untuk memberikan solusi yang efektif dan bernilai.":
+    "Welcome to my portfolio! I am a Full-Stack Developer and Data Analyst interested in creating functional and innovative digital solutions. Explore projects I have worked on, from websites and landing pages to web applications with frontend and backend development. Each project prioritizes quality, responsive design, and an optimal user experience to deliver effective, valuable solutions.",
 };
 
 export function usePortfolioInteractions(container: RefObject<HTMLDivElement | null>) {
@@ -43,16 +40,54 @@ export function usePortfolioInteractions(container: RefObject<HTMLDivElement | n
     const q = <T extends HTMLElement = HTMLElement>(selector: string) =>
       root.querySelector<T>(selector);
     const all = (selector: string) => Array.from(root.querySelectorAll<HTMLElement>(selector));
+    const certificateGrid = q<HTMLElement>("#certificate-grid");
+    if (certificateGrid) {
+      const cards = Array.from(certificateGrid.children);
+      cards
+        .sort((left, right) => {
+          const leftOrder = Number(left.querySelector("img")?.getAttribute("data-certificate-order"));
+          const rightOrder = Number(right.querySelector("img")?.getAttribute("data-certificate-order"));
+          return leftOrder - rightOrder;
+        })
+        .forEach((card) => certificateGrid.append(card));
+    }
     let filter = "all",
       query = "",
       page = 1,
-      showAll = false,
-      certFilter = "all",
-      certQuery = "";
+      showAll = false;
     let lastFocus: HTMLElement | null = null;
+    let certificatePages: string[] = [];
+    let certificateTitle = "";
+    let certificatePageIndex = 0;
     const setText = (id: string, text: string) => {
       const el = q("#" + id);
       if (el) el.textContent = text;
+    };
+    const showCertificatePage = () => {
+      const pageUrl = certificatePages[certificatePageIndex];
+      if (!pageUrl) return;
+      const image = q<HTMLImageElement>("#cert-modal-image");
+      if (image) {
+        image.src = pageUrl;
+        image.alt = `${certificateTitle} - Halaman ${certificatePageIndex + 1}`;
+      }
+      const controls = q<HTMLElement>("#cert-modal-page-controls");
+      if (controls) controls.hidden = certificatePages.length < 2;
+      const previous = q<HTMLButtonElement>("#cert-modal-page-previous");
+      const next = q<HTMLButtonElement>("#cert-modal-page-next");
+      if (previous) previous.disabled = certificatePageIndex === 0;
+      if (next) next.disabled = certificatePageIndex === certificatePages.length - 1;
+      setText(
+        "cert-modal-page-count",
+        `Halaman ${certificatePageIndex + 1} dari ${certificatePages.length}`,
+      );
+      const download = q<HTMLAnchorElement>("#cert-modal-download");
+      if (download) {
+        download.href = pageUrl;
+        download.textContent = certificatePages.length > 1
+          ? `Buka Halaman ${certificatePageIndex + 1}`
+          : "Buka Gambar Asli";
+      }
     };
     const selectButton = (el: HTMLElement, selected: boolean) => {
       el.classList.remove(...(selected ? inactive : active).split(" "));
@@ -68,9 +103,11 @@ export function usePortfolioInteractions(container: RefObject<HTMLDivElement | n
       );
       const pages = Math.max(1, Math.ceil(matches.length / 4));
       page = Math.min(page, pages);
-      cards.forEach((c) => c.classList.add("hidden"));
+      cards.forEach((card) => {
+        card.hidden = true;
+      });
       (showAll ? matches : matches.slice((page - 1) * 4, page * 4)).forEach((c) =>
-        c.classList.remove("hidden"),
+        (c.hidden = false),
       );
       all('#projects button[id^="filter-"]').forEach((b) =>
         selectButton(b, b.id === "filter-" + filter),
@@ -99,33 +136,6 @@ export function usePortfolioInteractions(container: RefObject<HTMLDivElement | n
         q("#projects-grid")?.after(empty);
       }
       empty.classList.toggle("hidden", matches.length > 0);
-    };
-    const certButtons = all('#certificates button[data-action^="openCertModal"]');
-    const certCards = certButtons.map((b) => b.closest<HTMLElement>(".group"));
-    const renderCertificates = () => {
-      certCards.forEach((card, i) => {
-        if (!card) return;
-        const category = i === 1 ? "cloud" : "government";
-        card.classList.toggle(
-          "hidden",
-          (certFilter !== "all" && certFilter !== category) ||
-            !(card.textContent || "").toLowerCase().includes(certQuery),
-        );
-      });
-      all("[data-cert-filter]").forEach((b) =>
-        selectButton(b, b.dataset["certFilter"] === certFilter),
-      );
-      let empty = q("[data-empty='certificates']");
-      if (!empty) {
-        empty = document.createElement("p");
-        empty.dataset["empty"] = "certificates";
-        empty.textContent = "Tidak ada sertifikat yang ditemukan.";
-        q("#certificates .grid")?.after(empty);
-      }
-      empty.classList.toggle(
-        "hidden",
-        certCards.some((c) => c && !c.classList.contains("hidden")),
-      );
     };
     const close = () => {
       all("#project-modal,#certModal").forEach((m) => {
@@ -167,10 +177,6 @@ export function usePortfolioInteractions(container: RefObject<HTMLDivElement | n
       });
       if (img.complete && !img.naturalWidth) fallback();
     });
-    const certGridToggle = all("#certificates button").find((b) =>
-      b.textContent?.includes("Tampilkan Semua"),
-    );
-    if (certGridToggle) certGridToggle.dataset["certFilter"] = "all";
     const originalNodes: [Text, string][] = [];
     const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
     while (walker.nextNode()) {
@@ -180,16 +186,13 @@ export function usePortfolioInteractions(container: RefObject<HTMLDivElement | n
     }
     const click = async (event: MouseEvent) => {
       if (!(event.target instanceof Element)) return;
-      const b = event.target.closest<HTMLElement>("[data-action],[data-cert-filter]");
+      const b = event.target.closest<HTMLElement>("[data-action]");
       if (!b) {
         if (event.target.matches("#project-modal,#certModal")) close();
         return;
       }
       const action = b.dataset["action"] || "";
-      if (b.dataset["certFilter"]) {
-        certFilter = b.dataset["certFilter"] || "all";
-        renderCertificates();
-      } else if (action.startsWith("setProjectFilter")) {
+      if (action.startsWith("setProjectFilter")) {
         filter = action.match(/'([^']+)'/)?.[1] || "all";
         page = 1;
         showAll = false;
@@ -242,26 +245,31 @@ export function usePortfolioInteractions(container: RefObject<HTMLDivElement | n
           );
         open("project-modal");
       } else if (action.startsWith("openCertModal")) {
-        const args = [...action.matchAll(/'([^']*)'/g)].map((m) => m[1]);
-        const img = q<HTMLImageElement>("#cert-modal-image");
-        if (img && args[0]) {
-          img.src = args[0];
-          img.alt = args[1] || "Dokumen Sertifikat";
-        }
-        for (const [i, id] of [
-          "cert-modal-title",
-          "cert-modal-issuer",
-          "cert-modal-date",
-          "cert-modal-cred",
-        ].entries())
-          setText(id, args[i + 1] || "");
-        const download = q<HTMLAnchorElement>("#cert-modal-download");
-        if (download && args[0]) {
-          download.href = args[0];
-          download.target = "_blank";
-          download.textContent = "Unduh Dokumen";
-        }
+        const card = b.closest<HTMLElement>("#certificates .group");
+        const preview = card?.querySelector<HTMLImageElement>("img");
+        const imageUrl = preview?.getAttribute("src") || "";
+        const secondPage = preview?.dataset["certImageTwo"] || "";
+        const title = card?.querySelector("h3")?.textContent?.trim() || "Dokumen Sertifikat";
+        const issuer =
+          card?.querySelector(".certificate-issuer, div.text-secondary")?.textContent?.trim() || "";
+        const date = card?.querySelector(".certificate-date")?.textContent?.trim() || "";
+        certificateTitle = title;
+        certificatePages = [imageUrl, secondPage].filter((pageUrl) => Boolean(pageUrl));
+        certificatePageIndex = 0;
+        setText("cert-modal-title", title);
+        setText("cert-modal-issuer", issuer);
+        setText("cert-modal-date", date);
+        setText("cert-modal-cred", certificatePages.length > 1 ? "Dokumen Multi-Halaman" : title);
+        showCertificatePage();
         open("certModal");
+      } else if (action === "certificate-page-previous") {
+        certificatePageIndex = Math.max(0, certificatePageIndex - 1);
+        showCertificatePage();
+      } else if (action === "certificate-page-next") {
+        certificatePageIndex = Math.min(certificatePages.length - 1, certificatePageIndex + 1);
+        showCertificatePage();
+      } else if (action === "showAllCertificates()") {
+        q("#certificate-grid")?.scrollIntoView({ behavior: "smooth", block: "start" });
       } else if (action.startsWith("close")) close();
       else if (action.includes("classList.toggle('dark')"))
         document.documentElement.classList.toggle("dark");
@@ -299,9 +307,6 @@ export function usePortfolioInteractions(container: RefObject<HTMLDivElement | n
         query = event.target.value.toLowerCase().trim();
         page = 1;
         renderProjects();
-      } else if (event.target.closest("#certificates")) {
-        certQuery = event.target.value.toLowerCase().trim();
-        renderCertificates();
       }
     };
     const submit = (event: Event) => {
@@ -339,7 +344,6 @@ export function usePortfolioInteractions(container: RefObject<HTMLDivElement | n
       }
     });
     renderProjects();
-    renderCertificates();
     root.addEventListener("click", click);
     root.addEventListener("input", input);
     root.addEventListener("submit", submit);
