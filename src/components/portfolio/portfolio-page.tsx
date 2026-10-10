@@ -34,49 +34,49 @@ export function PortfolioPage() {
               data-path="overview"
               href="#home"
             >
-              {"Home"}
+              {"Beranda"}
             </a>
             <a
               className="px-3 py-1.5 font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors rounded-lg"
               data-path="about"
               href="#about"
             >
-              {"About"}
+              {"Tentang"}
             </a>
             <a
               className="px-3 py-1.5 font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors rounded-lg"
               data-path="skills"
               href="#skills"
             >
-              {"Skills"}
+              {"Keahlian"}
             </a>
             <a
               className="px-3 py-1.5 font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors rounded-lg"
               data-path="projects"
               href="#projects"
             >
-              {"Projects"}
+              {"Proyek"}
             </a>
             <a
               className="px-3 py-1.5 font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors rounded-lg"
               data-path="experience"
               href="#experience"
             >
-              {"Experience"}
+              {"Pengalaman"}
             </a>
             <a
               className="px-3 py-1.5 font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors rounded-lg"
               data-path="certificates"
               href="#certificates"
             >
-              {"Certificates"}
+              {"Sertifikat"}
             </a>
             <a
               className="px-3 py-1.5 font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors rounded-lg"
               data-path="contact"
               href="#contact"
             >
-              {"Contact"}
+              {"Kontak"}
             </a>
           </nav>
           <div className="flex items-center gap-2 shrink-0">
@@ -167,37 +167,6 @@ export function PortfolioPage() {
                     <span className="material-symbols-outlined text-sm">{"description"}</span>
                     <span className="">{"Unduh CV"}</span>
                   </a>
-                  <div className="flex items-center gap-2 ml-auto lg:ml-2">
-                    <a
-                      className="p-2.5 rounded-lg border border-border-hairline bg-surface-card hover:bg-surface-subtle text-on-surface-variant hover:text-primary transition-colors"
-                      href="https://github.com/HaikalAlbanna"
-                      rel="noreferrer"
-                      target="_blank"
-                      title="GitHub Profile"
-                    >
-                      <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"></path>
-                      </svg>
-                    </a>
-                    <a
-                      className="p-2.5 rounded-lg border border-border-hairline bg-surface-card hover:bg-surface-subtle text-on-surface-variant hover:text-primary transition-colors"
-                      href="https://www.linkedin.com/in/haikal-tirta-albanna-546575192/"
-                      rel="noreferrer"
-                      target="_blank"
-                      title="LinkedIn Profile"
-                    >
-                      <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
-                      </svg>
-                    </a>
-                    <a
-                      className="p-2.5 rounded-lg border border-border-hairline bg-surface-card hover:bg-surface-subtle text-on-surface-variant hover:text-primary transition-colors"
-                      href="mailto:haikalalbanna2313@gmail.com"
-                      title="Email Direct"
-                    >
-                      <span className="material-symbols-outlined text-xl">{"mail"}</span>
-                    </a>
-                  </div>
                 </div>
               </div>
 
@@ -221,21 +190,21 @@ export function PortfolioPage() {
                       className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
                       src="/profil.jpg"
                     />
-                    <div className="absolute inset-0 bg-linear-to-t from-primary/80 via-transparent to-transparent"></div>
+                    <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent pointer-events-none"></div>
 
-                    <div className="absolute bottom-4 left-4 right-4 text-on-primary">
+                    <div className="absolute bottom-4 left-4 right-4 text-white">
                       <div className="flex items-center gap-2 mb-1">
-                        <span className="font-headline-sm text-headline-sm font-semibold">
+                        <span className="font-headline-sm text-headline-sm font-semibold text-white">
                           {"Haikal Tirta Albanna"}
                         </span>
                         <span
-                          className="material-symbols-outlined text-secondary-fixed text-lg"
+                          className="material-symbols-outlined text-emerald-400 text-lg"
                           title="Verified Graduate"
                         >
                           {"verified"}
                         </span>
                       </div>
-                      <p className="font-label-code-sm text-label-code-sm text-surface-container-highest">
+                      <p className="font-label-code-sm text-label-code-sm text-white/80">
                         {"Informatika • S.Kom (Cum Laude)"}
                       </p>
                     </div>
@@ -303,7 +272,7 @@ export function PortfolioPage() {
                           {"Pendidikan Formal"}
                         </h4>
                         <span className="font-label-code-sm text-label-code-sm px-2 py-0.5 rounded bg-surface-subtle text-primary">
-                          {"2020 - 2024"}
+                          {"2021 - 2025"}
                         </span>
                       </div>
                       <p className="font-body-sm text-body-sm text-on-surface-variant">
