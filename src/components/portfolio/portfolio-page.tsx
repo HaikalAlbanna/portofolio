@@ -1443,148 +1443,6 @@ export function PortfolioPage() {
                   </div>
                 </div>
               </div>
-              <div className="bg-surface-card rounded-xl border border-border-hairline overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
-                <div
-                  className="relative w-full h-64 bg-surface-container overflow-hidden border-b border-border-hairline cursor-pointer"
-                  data-action="openCertModal"
-                >
-                  <img
-                    alt="Sertifikat Bangkit Academy - Halaman 1"
-                    className="w-full h-full object-contain bg-surface-container-high p-2 group-hover:scale-105 transition-transform duration-500"
-                    data-cert-image-two="/sertifikat/Bangkithal2.jpg"
-                    data-certificate-order="6"
-                    src="/sertifikat/Bangkithal1.jpg"
-                  />
-                  <div className="absolute top-4 left-4 flex gap-2">
-                    <span className="px-2.5 py-1 bg-surface-card/90 backdrop-blur rounded font-label-code-sm text-label-code-sm font-semibold text-primary">
-                      {"Bangkit Academy"}
-                    </span>
-                    <span className="px-2.5 py-1 bg-secondary text-on-secondary rounded font-label-code-sm text-label-code-sm font-medium">
-                      {"2 Halaman"}
-                    </span>
-                  </div>
-                </div>
-                <div className="p-6 lg:p-8 flex flex-col justify-between grow space-y-4">
-                  <div>
-                    <div className="flex items-center justify-between text-secondary font-label-code-sm text-label-code-sm font-semibold mb-1">
-                      <span className="certificate-issuer">{"KEMDIKBUDRISTEK"}</span>
-                      <span className="certificate-date text-outline font-normal font-mono">
-                        {"6 September 2023"}
-                      </span>
-                    </div>
-                    <h3 className="font-headline-sm text-headline-sm text-primary font-bold mb-2">
-                      {"Bangkit Academy: Machine Learning for Cloud Engineer"}
-                    </h3>
-                    <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                      {"Sertifikat kelulusan Bangkit Academy. Halaman kedua merupakan lanjutan dokumen."}
-                    </p>
-                  </div>
-                  <div className="pt-4 border-t border-border-hairline flex items-center justify-between">
-                    <Button
-                      variant="portfolio"
-                      size="reference"
-                      className="inline-flex items-center gap-1.5 px-4 py-2 bg-primary rounded-lg font-body-sm text-body-sm font-medium hover:bg-primary-container transition-colors shadow-sm text-on-primary"
-                      data-action="openCertModal"
-                    >
-                      <span>{"Lihat Dokumen"}</span>
-                      <span className="material-symbols-outlined text-sm">{"open_in_new"}</span>
-                    </Button>
-                    <span className="font-label-code-sm text-xs text-outline">{"BANGKIT 2023"}</span>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-surface-card rounded-xl border border-border-hairline overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
-                <div
-                  className="relative w-full h-64 bg-surface-container overflow-hidden border-b border-border-hairline cursor-pointer"
-                  data-action="openCertModal"
-                >
-                  <img
-                    alt="Cisco CCNAv7 Introduction to Networks"
-                    className="w-full h-full object-contain bg-surface-container-high p-2 group-hover:scale-105 transition-transform duration-500"
-                    data-certificate-order="7"
-                    src="/sertifikat/CNA1.jpg"
-                  />
-                  <div className="absolute top-4 left-4 flex gap-2">
-                    <span className="px-2.5 py-1 bg-surface-card/90 backdrop-blur rounded font-label-code-sm text-label-code-sm font-semibold text-primary">
-                      {"Cisco Networking Academy"}
-                    </span>
-                  </div>
-                </div>
-                <div className="p-6 lg:p-8 flex flex-col justify-between grow space-y-4">
-                  <div>
-                    <div className="flex items-center justify-between text-secondary font-label-code-sm text-label-code-sm font-semibold mb-1">
-                      <span className="certificate-issuer">{"CISCO NETWORKING ACADEMY"}</span>
-                      <span className="certificate-date text-outline font-normal font-mono">
-                        {"6 September 2023"}
-                      </span>
-                    </div>
-                    <h3 className="font-headline-sm text-headline-sm text-primary font-bold mb-2">
-                      {"CCNAv7: Introduction to Networks"}
-                    </h3>
-                    <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                      {"Dasar jaringan, pengalamatan, perangkat, dan konektivitas."}
-                    </p>
-                  </div>
-                  <div className="pt-4 border-t border-border-hairline flex items-center justify-between">
-                    <Button
-                      variant="portfolio"
-                      size="reference"
-                      className="inline-flex items-center gap-1.5 px-4 py-2 bg-primary rounded-lg font-body-sm text-body-sm font-medium hover:bg-primary-container transition-colors shadow-sm text-on-primary"
-                      data-action="openCertModal"
-                    >
-                      <span>{"Lihat Dokumen"}</span>
-                      <span className="material-symbols-outlined text-sm">{"open_in_new"}</span>
-                    </Button>
-                    <span className="font-label-code-sm text-xs text-outline">{"CISCO 2023"}</span>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-surface-card rounded-xl border border-border-hairline overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
-                <div
-                  className="relative w-full h-64 bg-surface-container overflow-hidden border-b border-border-hairline cursor-pointer"
-                  data-action="openCertModal"
-                >
-                  <img
-                    alt="Cisco CCNAv7 Switching Routing and Wireless Essentials"
-                    className="w-full h-full object-contain bg-surface-container-high p-2 group-hover:scale-105 transition-transform duration-500"
-                    data-certificate-order="5"
-                    src="/sertifikat/CNA2.jpg"
-                  />
-                  <div className="absolute top-4 left-4 flex gap-2">
-                    <span className="px-2.5 py-1 bg-surface-card/90 backdrop-blur rounded font-label-code-sm text-label-code-sm font-semibold text-primary">
-                      {"Cisco Networking Academy"}
-                    </span>
-                  </div>
-                </div>
-                <div className="p-6 lg:p-8 flex flex-col justify-between grow space-y-4">
-                  <div>
-                    <div className="flex items-center justify-between text-secondary font-label-code-sm text-label-code-sm font-semibold mb-1">
-                      <span className="certificate-issuer">{"CISCO NETWORKING ACADEMY"}</span>
-                      <span className="certificate-date text-outline font-normal font-mono">
-                        {"1 April 2024"}
-                      </span>
-                    </div>
-                    <h3 className="font-headline-sm text-headline-sm text-primary font-bold mb-2">
-                      {"CCNAv7: Switching, Routing, and Wireless Essentials"}
-                    </h3>
-                    <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                      {"Konfigurasi switching, routing, dan jaringan nirkabel."}
-                    </p>
-                  </div>
-                  <div className="pt-4 border-t border-border-hairline flex items-center justify-between">
-                    <Button
-                      variant="portfolio"
-                      size="reference"
-                      className="inline-flex items-center gap-1.5 px-4 py-2 bg-primary rounded-lg font-body-sm text-body-sm font-medium hover:bg-primary-container transition-colors shadow-sm text-on-primary"
-                      data-action="openCertModal"
-                    >
-                      <span>{"Lihat Dokumen"}</span>
-                      <span className="material-symbols-outlined text-sm">{"open_in_new"}</span>
-                    </Button>
-                    <span className="font-label-code-sm text-xs text-outline">{"CISCO 2024"}</span>
-                  </div>
-                </div>
-              </div>
               <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 mt-10 border-t border-border-hairline font-label-code-sm text-label-code-sm text-on-surface-variant">
                 <div className="flex items-center gap-2" id="project-pagination-controls">
                   <Button
@@ -1806,164 +1664,7 @@ export function PortfolioPage() {
                 <div className="bg-surface-card rounded-xl border border-border-hairline overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
                   <div
                     className="relative w-full h-64 bg-surface-container overflow-hidden border-b border-border-hairline cursor-pointer"
-                    data-action="openCertModal('https://lh3.googleusercontent.com/aida/AEtjO1VsyrBbsGyPdZMjoNldtswax2iZhkTMEuMW46pmbnhoGqr65vpY_Y2yGZImGV31uvmqvPxKTXU3NPyHdp29jYucvxz8Lno1RWhO52oUn9bY50WjL7V8STXFEKVpMn7bAZmkxM8uhN2OVxqy4_k_P7hB8sY3auETYzWuIQctnaCKGDjc5vwqZnTF7KA5Bg9T9NbH4hJWKUzsLXsWmSeEU_yPkQy7f23JE_1xNEBAaV4yhJfUnDlf5Rf_-lI', 'Sertifikat Kelulusan Program MSIB Batch 6', 'Kemendikbudristek & LLDIKTI', 'Februari 2024 - Juni 2024', 'ID Kredensial: MSIB-6/LL2/2024/0912')"
-                  >
-                    <img
-                      alt="Sertifikat MSIB Batch 6"
-                      className="w-full h-full object-contain bg-surface-container-high p-2 group-hover:scale-105 transition-transform duration-500"
-                      data-certificate-order="4"
-                      src="/sertifikat/MSIB%206.jpg"
-                    />
-                    <div className="absolute top-4 left-4 flex gap-2">
-                      <span className="px-2.5 py-1 bg-surface-card/90 backdrop-blur rounded font-label-code-sm text-label-code-sm font-semibold text-primary">
-                        {"Kemendikbudristek"}
-                      </span>
-                      <span className="px-2.5 py-1 bg-secondary text-on-secondary rounded font-label-code-sm text-label-code-sm font-medium">
-                        {"MSIB Batch 6"}
-                      </span>
-                    </div>
-                  </div>
-                  <div className="p-6 lg:p-8 flex flex-col justify-between grow space-y-4">
-                    <div>
-                      <div className="flex items-center justify-between text-secondary font-label-code-sm text-label-code-sm font-semibold mb-1">
-                        <span className="certificate-issuer">{"KEMENDIKBUDRISTEK & LLDIKTI"}</span>
-                        <span className="certificate-date text-outline font-normal font-mono">
-                          {"1 Februari 2024 - 30 Juni 2024"}
-                        </span>
-                      </div>
-                      <h3 className="font-headline-sm text-headline-sm text-primary font-bold mb-2">
-                        {"Sertifikat Kelulusan Program MSIB Batch 6"}
-                      </h3>
-                      <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                        {
-                          "Program Magang & Studi Independen Bersertifikat (MSIB) Batch 6 posisi Information System Developer. Fokus rekayasa arsitektur sistem informasi institusi, standarisasi API, dan integrasi database relasional."
-                        }
-                      </p>
-                    </div>
-                    <div className="pt-4 border-t border-border-hairline flex items-center justify-between">
-                      <Button
-                        variant="portfolio"
-                        size="reference"
-                        className="inline-flex items-center gap-1.5 px-4 py-2 bg-primary rounded-lg font-body-sm text-body-sm font-medium hover:bg-primary-container transition-colors shadow-sm text-on-primary"
-                        data-action="openCertModal('https://lh3.googleusercontent.com/aida/AEtjO1VsyrBbsGyPdZMjoNldtswax2iZhkTMEuMW46pmbnhoGqr65vpY_Y2yGZImGV31uvmqvPxKTXU3NPyHdp29jYucvxz8Lno1RWhO52oUn9bY50WjL7V8STXFEKVpMn7bAZmkxM8uhN2OVxqy4_k_P7hB8sY3auETYzWuIQctnaCKGDjc5vwqZnTF7KA5Bg9T9NbH4hJWKUzsLXsWmSeEU_yPkQy7f23JE_1xNEBAaV4yhJfUnDlf5Rf_-lI', 'Sertifikat Kelulusan Program MSIB Batch 6', 'Kemendikbudristek & LLDIKTI', 'Februari 2024 - Juni 2024', 'ID Kredensial: MSIB-6/LL2/2024/0912')"
-                      >
-                        <span className="">{"Lihat Dokumen Lengkap"}</span>
-                        <span className="material-symbols-outlined text-sm">{"open_in_new"}</span>
-                      </Button>
-                      <span className="font-label-code-sm text-xs text-outline">
-                        {"KEMENDIKBUDRISTEK 2024"}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div className="bg-surface-card rounded-xl border border-border-hairline overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
-                  <div
-                    className="relative w-full h-64 bg-surface-container overflow-hidden border-b border-border-hairline cursor-pointer"
-                    data-action="openCertModal('https://lh3.googleusercontent.com/aida-public/AB6AXuCJf8e3fpk6UKYWGNndZ7iCi2O0QjSXhi23wd1V0Woz_nD8FgJcBhPpwExqMX9XK7JY7WT1bYSMA4iN87kfi1_0A4RZN1tdvz4bzHT7I2fDCHPIMGG0J4lYZW5L1xWy9MK2sFUWDy2GO7h8ManbRcx4R5xAMsmRc_20lhQGCAmDx5ppX4H--CY0L7nWObQv8cluM6RhvofJtRXSE4IxlMcgL-pgbcrqpge4yE9ykR3Z2hvLklolO_1o9w', 'Bangkit Academy - Cloud Computing Graduate', 'Google, GoTo, & Traveloka', 'September 2024 - Desember 2024', 'ID Kredensial: BANGKIT-CC-2024-8841')"
-                  >
-                    <img
-                      alt="Sertifikat MSIB Batch 7"
-                      className="w-full h-full object-contain bg-surface-container-high p-2 group-hover:scale-105 transition-transform duration-500"
-                      data-certificate-order="3"
-                      src="/sertifikat/MSIB%207.jpg"
-                    />
-                    <div className="absolute top-4 left-4 flex gap-2">
-                      <span className="px-2.5 py-1 bg-surface-card/90 backdrop-blur rounded font-label-code-sm text-label-code-sm font-semibold text-primary">
-                        {"Kemendikbudristek"}
-                      </span>
-                      <span className="px-2.5 py-1 bg-secondary text-on-secondary rounded font-label-code-sm text-label-code-sm font-medium">
-                        {"MSIB Batch 7"}
-                      </span>
-                    </div>
-                  </div>
-                  <div className="p-6 lg:p-8 flex flex-col justify-between grow space-y-4">
-                    <div>
-                      <div className="flex items-center justify-between text-secondary font-label-code-sm text-label-code-sm font-semibold mb-1">
-                        <span className="certificate-issuer">{"KAMPUS MERDEKA"}</span>
-                        <span className="certificate-date text-outline font-normal font-mono">
-                          {"6 September–31 Desember 2024"}
-                        </span>
-                      </div>
-                      <h3 className="font-headline-sm text-headline-sm text-primary font-bold mb-2">
-                        {"Studi Independen Bersertifikat MSIB Batch 7"}
-                      </h3>
-                      <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                        {
-                          "Sertifikat kelulusan program Studi Independen Bersertifikat (MSIB) Angkatan 7 tahun 2024."
-                        }
-                      </p>
-                    </div>
-                    <div className="pt-4 border-t border-border-hairline flex items-center justify-between">
-                      <Button
-                        variant="portfolio"
-                        size="reference"
-                        className="inline-flex items-center gap-1.5 px-4 py-2 bg-primary rounded-lg font-body-sm text-body-sm font-medium hover:bg-primary-container transition-colors shadow-sm text-on-primary"
-                        data-action="openCertModal('https://lh3.googleusercontent.com/aida-public/AB6AXuCJf8e3fpk6UKYWGNndZ7iCi2O0QjSXhi23wd1V0Woz_nD8FgJcBhPpwExqMX9XK7JY7WT1bYSMA4iN87kfi1_0A4RZN1tdvz4bzHT7I2fDCHPIMGG0J4lYZW5L1xWy9MK2sFUWDy2GO7h8ManbRcx4R5xAMsmRc_20lhQGCAmDx5ppX4H--CY0L7nWObQv8cluM6RhvofJtRXSE4IxlMcgL-pgbcrqpge4yE9ykR3Z2hvLklolO_1o9w', 'Bangkit Academy - Cloud Computing Graduate', 'Google, GoTo, & Traveloka', 'September 2024 - Desember 2024', 'ID Kredensial: BANGKIT-CC-2024-8841')"
-                      >
-                        <span className="">{"Lihat Dokumen Lengkap"}</span>
-                        <span className="material-symbols-outlined text-sm">{"open_in_new"}</span>
-                      </Button>
-                      <span className="font-label-code-sm text-xs text-outline">
-                        {"KEMENDIKBUDRISTEK 2024"}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div className="bg-surface-card rounded-xl border border-border-hairline overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
-                  <div
-                    className="relative w-full h-64 bg-surface-container overflow-hidden border-b border-border-hairline cursor-pointer"
-                    data-action="openCertModal('https://lh3.googleusercontent.com/aida-public/AB6AXuDBY1iQ_RJFOUuaevMiQeodKzHjEkUH9DncVgvPXoVW_1muCQH30lSvFwTbVcEOur1rWKTEzhW520AtBkzuhVuNDg45dAew4Twt0qcrLl5dKmAN3U-epTMGI0yX2Q7xl7ERiiEm8t2QpkJPfI6KU3BGjr_8BaTJ4XX5wrVaqLLOE1LXhY00x0vQ-_c_2OcYA0Djph7lmymB6rtIzSzpvenu6YBzgBUzXsee2nIxQoBAzpv9bWPUAwJqIA', 'MagangHub Kemnaker RI - Program Magang Nasional', 'Kementerian Ketenagakerjaan RI', 'Januari 2024 - Juni 2024', 'ID Kredensial: KEMNAKER-MH/2024/7740')"
-                  >
-                    <img
-                      alt="Sertifikat MagangHub 2026"
-                      className="w-full h-full object-contain bg-surface-container-high p-2 group-hover:scale-105 transition-transform duration-500"
-                      data-certificate-order="2"
-                      src="/sertifikat/MAGANG%20HUB.jpg"
-                    />
-                    <div className="absolute top-4 left-4 flex gap-2">
-                      <span className="px-2.5 py-1 bg-surface-card/90 backdrop-blur rounded font-label-code-sm text-label-code-sm font-semibold text-primary">
-                        {"Kemnaker"}
-                      </span>
-                      <span className="px-2.5 py-1 bg-secondary text-on-secondary rounded font-label-code-sm text-label-code-sm font-medium">
-                        {"MagangHub Batch 3 2026"}
-                      </span>
-                    </div>
-                  </div>
-                  <div className="p-6 lg:p-8 flex flex-col justify-between grow space-y-4">
-                    <div>
-                      <div className="flex items-center justify-between text-secondary font-label-code-sm text-label-code-sm font-semibold mb-1">
-                        <span className="certificate-issuer">{"MAGANGHUB"}</span>
-                        <span className="certificate-date text-outline font-normal font-mono">
-                          {"16 Desember 2025 - 16 Juni 2026"}
-                        </span>
-                      </div>
-                      <h3 className="font-headline-sm text-headline-sm text-primary font-bold mb-2">
-                        {"Sertifikat MagangHub 2026"}
-                      </h3>
-                      <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                        {"Sertifikat penyelesaian program MagangHub tahun 2026."}
-                      </p>
-                    </div>
-                    <div className="pt-4 border-t border-border-hairline flex items-center justify-between">
-                      <Button
-                        variant="portfolio"
-                        size="reference"
-                        className="inline-flex items-center gap-1.5 px-4 py-2 bg-primary rounded-lg font-body-sm text-body-sm font-medium hover:bg-primary-container transition-colors shadow-sm text-on-primary"
-                        data-action="openCertModal('https://lh3.googleusercontent.com/aida-public/AB6AXuDBY1iQ_RJFOUuaevMiQeodKzHjEkUH9DncVgvPXoVW_1muCQH30lSvFwTbVcEOur1rWKTEzhW520AtBkzuhVuNDg45dAew4Twt0qcrLl5dKmAN3U-epTMGI0yX2Q7xl7ERiiEm8t2QpkJPfI6KU3BGjr_8BaTJ4XX5wrVaqLLOE1LXhY00x0vQ-_c_2OcYA0Djph7lmymB6rtIzSzpvenu6YBzgBUzXsee2nIxQoBAzpv9bWPUAwJqIA', 'MagangHub Kemnaker RI - Program Magang Nasional', 'Kementerian Ketenagakerjaan RI', 'Januari 2024 - Juni 2024', 'ID Kredensial: KEMNAKER-MH/2024/7740')"
-                      >
-                        <span className="">{"Lihat Dokumen Lengkap"}</span>
-                        <span className="material-symbols-outlined text-sm">{"open_in_new"}</span>
-                      </Button>
-                      <span className="font-label-code-sm text-xs text-outline">
-                        {"MAGANGHUB 2026"}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div className="bg-surface-card rounded-xl border border-border-hairline overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
-                  <div
-                    className="relative w-full h-64 bg-surface-container overflow-hidden border-b border-border-hairline cursor-pointer"
-                    data-action="openCertModal('https://lh3.googleusercontent.com/aida-public/AB6AXuCYsSfYueWSbeDsijkeJs-P5CFMJHW4JO9dmzBc-A7Yp6pyozFApQV3D_8f-FrtcBj36awBvpquDR4YQfp7OxuAE_RORgTKdtw-j0iVwA0bkivOqA0rHNnjB-Q6Np1nnwnTGlj4EG5pHbp1q9jojlrb4glmlf-0vd79uLXWCF2R2BDWFx6RJ9SGdKnrLj8JapRCKUvgYw65Uh9y58pP5o-sxcn_FxmfMzR5SZtHjDZvzEUXKmYj5V3MgQ', 'Surat Keterangan Kinerja & Dedikasi Digitalisasi', 'BAPAS OKU Induk (Kemenimipas RI)', 'Desember 2024 - Juni 2025', 'ID Kredensial: W6.PAS.21-KP.04.01-1402')"
+                    data-action="openCertModal"
                   >
                     <img
                       alt="Surat Pengalaman Magang - Halaman 1"
@@ -2003,12 +1704,311 @@ export function PortfolioPage() {
                         variant="portfolio"
                         size="reference"
                         className="inline-flex items-center gap-1.5 px-4 py-2 bg-primary rounded-lg font-body-sm text-body-sm font-medium hover:bg-primary-container transition-colors shadow-sm text-on-primary"
-                        data-action="openCertModal('https://lh3.googleusercontent.com/aida-public/AB6AXuCYsSfYueWSbeDsijkeJs-P5CFMJHW4JO9dmzBc-A7Yp6pyozFApQV3D_8f-FrtcBj36awBvpquDR4YQfp7OxuAE_RORgTKdtw-j0iVwA0bkivOqA0rHNnjB-Q6Np1nnwnTGlj4EG5pHbp1q9jojlrb4glmlf-0vd79uLXWCF2R2BDWFx6RJ9SGdKnrLj8JapRCKUvgYw65Uh9y58pP5o-sxcn_FxmfMzR5SZtHjDZvzEUXKmYj5V3MgQ', 'Surat Keterangan Kinerja & Dedikasi Digitalisasi', 'BAPAS OKU Induk (Kemenimipas RI)', 'Desember 2024 - Juni 2025', 'ID Kredensial: W6.PAS.21-KP.04.01-1402')"
+                        data-action="openCertModal"
                       >
                         <span className="">{"Lihat Dokumen Lengkap"}</span>
                         <span className="material-symbols-outlined text-sm">{"open_in_new"}</span>
                       </Button>
                       <span className="font-label-code-sm text-xs text-outline">{"BAPAS OKU"}</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-surface-card rounded-xl border border-border-hairline overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                  <div
+                    className="relative w-full h-64 bg-surface-container overflow-hidden border-b border-border-hairline cursor-pointer"
+                    data-action="openCertModal"
+                  >
+                    <img
+                      alt="Sertifikat MagangHub 2026"
+                      className="w-full h-full object-contain bg-surface-container-high p-2 group-hover:scale-105 transition-transform duration-500"
+                      data-certificate-order="2"
+                      src="/sertifikat/MAGANG%20HUB.jpg"
+                    />
+                    <div className="absolute top-4 left-4 flex gap-2">
+                      <span className="px-2.5 py-1 bg-surface-card/90 backdrop-blur rounded font-label-code-sm text-label-code-sm font-semibold text-primary">
+                        {"Kemnaker"}
+                      </span>
+                      <span className="px-2.5 py-1 bg-secondary text-on-secondary rounded font-label-code-sm text-label-code-sm font-medium">
+                        {"MagangHub Batch 3 2026"}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="p-6 lg:p-8 flex flex-col justify-between grow space-y-4">
+                    <div>
+                      <div className="flex items-center justify-between text-secondary font-label-code-sm text-label-code-sm font-semibold mb-1">
+                        <span className="certificate-issuer">{"MAGANGHUB"}</span>
+                        <span className="certificate-date text-outline font-normal font-mono">
+                          {"16 Desember 2025 - 16 Juni 2026"}
+                        </span>
+                      </div>
+                      <h3 className="font-headline-sm text-headline-sm text-primary font-bold mb-2">
+                        {"Sertifikat MagangHub 2026"}
+                      </h3>
+                      <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                        {"Sertifikat penyelesaian program MagangHub tahun 2026."}
+                      </p>
+                    </div>
+                    <div className="pt-4 border-t border-border-hairline flex items-center justify-between">
+                      <Button
+                        variant="portfolio"
+                        size="reference"
+                        className="inline-flex items-center gap-1.5 px-4 py-2 bg-primary rounded-lg font-body-sm text-body-sm font-medium hover:bg-primary-container transition-colors shadow-sm text-on-primary"
+                        data-action="openCertModal"
+                      >
+                        <span className="">{"Lihat Dokumen Lengkap"}</span>
+                        <span className="material-symbols-outlined text-sm">{"open_in_new"}</span>
+                      </Button>
+                      <span className="font-label-code-sm text-xs text-outline">
+                        {"MAGANGHUB 2026"}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-surface-card rounded-xl border border-border-hairline overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                  <div
+                    className="relative w-full h-64 bg-surface-container overflow-hidden border-b border-border-hairline cursor-pointer"
+                    data-action="openCertModal"
+                  >
+                    <img
+                      alt="Sertifikat MSIB Batch 7"
+                      className="w-full h-full object-contain bg-surface-container-high p-2 group-hover:scale-105 transition-transform duration-500"
+                      data-certificate-order="3"
+                      src="/sertifikat/MSIB%207.jpg"
+                    />
+                    <div className="absolute top-4 left-4 flex gap-2">
+                      <span className="px-2.5 py-1 bg-surface-card/90 backdrop-blur rounded font-label-code-sm text-label-code-sm font-semibold text-primary">
+                        {"Kemendikbudristek"}
+                      </span>
+                      <span className="px-2.5 py-1 bg-secondary text-on-secondary rounded font-label-code-sm text-label-code-sm font-medium">
+                        {"MSIB Batch 7"}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="p-6 lg:p-8 flex flex-col justify-between grow space-y-4">
+                    <div>
+                      <div className="flex items-center justify-between text-secondary font-label-code-sm text-label-code-sm font-semibold mb-1">
+                        <span className="certificate-issuer">{"KAMPUS MERDEKA"}</span>
+                        <span className="certificate-date text-outline font-normal font-mono">
+                          {"6 September–31 Desember 2024"}
+                        </span>
+                      </div>
+                      <h3 className="font-headline-sm text-headline-sm text-primary font-bold mb-2">
+                        {"Studi Independen Bersertifikat MSIB Batch 7"}
+                      </h3>
+                      <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                        {
+                          "Sertifikat kelulusan program Studi Independen Bersertifikat (MSIB) Angkatan 7 tahun 2024."
+                        }
+                      </p>
+                    </div>
+                    <div className="pt-4 border-t border-border-hairline flex items-center justify-between">
+                      <Button
+                        variant="portfolio"
+                        size="reference"
+                        className="inline-flex items-center gap-1.5 px-4 py-2 bg-primary rounded-lg font-body-sm text-body-sm font-medium hover:bg-primary-container transition-colors shadow-sm text-on-primary"
+                        data-action="openCertModal"
+                      >
+                        <span className="">{"Lihat Dokumen Lengkap"}</span>
+                        <span className="material-symbols-outlined text-sm">{"open_in_new"}</span>
+                      </Button>
+                      <span className="font-label-code-sm text-xs text-outline">
+                        {"KEMENDIKBUDRISTEK 2024"}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-surface-card rounded-xl border border-border-hairline overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                  <div
+                    className="relative w-full h-64 bg-surface-container overflow-hidden border-b border-border-hairline cursor-pointer"
+                    data-action="openCertModal"
+                  >
+                    <img
+                      alt="Sertifikat MSIB Batch 6"
+                      className="w-full h-full object-contain bg-surface-container-high p-2 group-hover:scale-105 transition-transform duration-500"
+                      data-certificate-order="4"
+                      src="/sertifikat/MSIB%206.jpg"
+                    />
+                    <div className="absolute top-4 left-4 flex gap-2">
+                      <span className="px-2.5 py-1 bg-surface-card/90 backdrop-blur rounded font-label-code-sm text-label-code-sm font-semibold text-primary">
+                        {"Kemendikbudristek"}
+                      </span>
+                      <span className="px-2.5 py-1 bg-secondary text-on-secondary rounded font-label-code-sm text-label-code-sm font-medium">
+                        {"MSIB Batch 6"}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="p-6 lg:p-8 flex flex-col justify-between grow space-y-4">
+                    <div>
+                      <div className="flex items-center justify-between text-secondary font-label-code-sm text-label-code-sm font-semibold mb-1">
+                        <span className="certificate-issuer">{"KEMENDIKBUDRISTEK & LLDIKTI"}</span>
+                        <span className="certificate-date text-outline font-normal font-mono">
+                          {"1 Februari 2024 - 30 Juni 2024"}
+                        </span>
+                      </div>
+                      <h3 className="font-headline-sm text-headline-sm text-primary font-bold mb-2">
+                        {"Sertifikat Kelulusan Program MSIB Batch 6"}
+                      </h3>
+                      <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                        {
+                          "Program Magang & Studi Independen Bersertifikat (MSIB) Batch 6 posisi Information System Developer. Fokus rekayasa arsitektur sistem informasi institusi, standarisasi API, dan integrasi database relasional."
+                        }
+                      </p>
+                    </div>
+                    <div className="pt-4 border-t border-border-hairline flex items-center justify-between">
+                      <Button
+                        variant="portfolio"
+                        size="reference"
+                        className="inline-flex items-center gap-1.5 px-4 py-2 bg-primary rounded-lg font-body-sm text-body-sm font-medium hover:bg-primary-container transition-colors shadow-sm text-on-primary"
+                        data-action="openCertModal"
+                      >
+                        <span className="">{"Lihat Dokumen Lengkap"}</span>
+                        <span className="material-symbols-outlined text-sm">{"open_in_new"}</span>
+                      </Button>
+                      <span className="font-label-code-sm text-xs text-outline">
+                        {"KEMENDIKBUDRISTEK 2024"}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-surface-card rounded-xl border border-border-hairline overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                  <div
+                    className="relative w-full h-64 bg-surface-container overflow-hidden border-b border-border-hairline cursor-pointer"
+                    data-action="openCertModal"
+                  >
+                    <img
+                      alt="Cisco CCNAv7 Switching Routing and Wireless Essentials"
+                      className="w-full h-full object-contain bg-surface-container-high p-2 group-hover:scale-105 transition-transform duration-500"
+                      data-certificate-order="5"
+                      src="/sertifikat/CNA2.jpg"
+                    />
+                    <div className="absolute top-4 left-4 flex gap-2">
+                      <span className="px-2.5 py-1 bg-surface-card/90 backdrop-blur rounded font-label-code-sm text-label-code-sm font-semibold text-primary">
+                        {"Cisco Networking Academy"}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="p-6 lg:p-8 flex flex-col justify-between grow space-y-4">
+                    <div>
+                      <div className="flex items-center justify-between text-secondary font-label-code-sm text-label-code-sm font-semibold mb-1">
+                        <span className="certificate-issuer">{"CISCO NETWORKING ACADEMY"}</span>
+                        <span className="certificate-date text-outline font-normal font-mono">
+                          {"1 April 2024"}
+                        </span>
+                      </div>
+                      <h3 className="font-headline-sm text-headline-sm text-primary font-bold mb-2">
+                        {"CCNAv7: Switching, Routing, and Wireless Essentials"}
+                      </h3>
+                      <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                        {"Konfigurasi switching, routing, dan jaringan nirkabel."}
+                      </p>
+                    </div>
+                    <div className="pt-4 border-t border-border-hairline flex items-center justify-between">
+                      <Button
+                        variant="portfolio"
+                        size="reference"
+                        className="inline-flex items-center gap-1.5 px-4 py-2 bg-primary rounded-lg font-body-sm text-body-sm font-medium hover:bg-primary-container transition-colors shadow-sm text-on-primary"
+                        data-action="openCertModal"
+                      >
+                        <span className="">{"Lihat Dokumen Lengkap"}</span>
+                        <span className="material-symbols-outlined text-sm">{"open_in_new"}</span>
+                      </Button>
+                      <span className="font-label-code-sm text-xs text-outline">{"CISCO 2024"}</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-surface-card rounded-xl border border-border-hairline overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                  <div
+                    className="relative w-full h-64 bg-surface-container overflow-hidden border-b border-border-hairline cursor-pointer"
+                    data-action="openCertModal"
+                  >
+                    <img
+                      alt="Sertifikat Bangkit Academy - Halaman 1"
+                      className="w-full h-full object-contain bg-surface-container-high p-2 group-hover:scale-105 transition-transform duration-500"
+                      data-cert-image-two="/sertifikat/Bangkithal2.jpg"
+                      data-certificate-order="6"
+                      src="/sertifikat/Bangkithal1.jpg"
+                    />
+                    <div className="absolute top-4 left-4 flex gap-2">
+                      <span className="px-2.5 py-1 bg-surface-card/90 backdrop-blur rounded font-label-code-sm text-label-code-sm font-semibold text-primary">
+                        {"Bangkit Academy"}
+                      </span>
+                      <span className="px-2.5 py-1 bg-secondary text-on-secondary rounded font-label-code-sm text-label-code-sm font-medium">
+                        {"2 Halaman"}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="p-6 lg:p-8 flex flex-col justify-between grow space-y-4">
+                    <div>
+                      <div className="flex items-center justify-between text-secondary font-label-code-sm text-label-code-sm font-semibold mb-1">
+                        <span className="certificate-issuer">{"KEMDIKBUDRISTEK"}</span>
+                        <span className="certificate-date text-outline font-normal font-mono">
+                          {"6 September–31 Desember 2024"}
+                        </span>
+                      </div>
+                      <h3 className="font-headline-sm text-headline-sm text-primary font-bold mb-2">
+                        {"Bangkit Academy: Machine Learning for Cloud Engineer"}
+                      </h3>
+                      <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                        {"Sertifikat kelulusan Bangkit Academy. Halaman kedua merupakan lanjutan dokumen."}
+                      </p>
+                    </div>
+                    <div className="pt-4 border-t border-border-hairline flex items-center justify-between">
+                      <Button
+                        variant="portfolio"
+                        size="reference"
+                        className="inline-flex items-center gap-1.5 px-4 py-2 bg-primary rounded-lg font-body-sm text-body-sm font-medium hover:bg-primary-container transition-colors shadow-sm text-on-primary"
+                        data-action="openCertModal"
+                      >
+                        <span className="">{"Lihat Dokumen Lengkap"}</span>
+                        <span className="material-symbols-outlined text-sm">{"open_in_new"}</span>
+                      </Button>
+                      <span className="font-label-code-sm text-xs text-outline">{"BANGKIT 2023"}</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-surface-card rounded-xl border border-border-hairline overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                  <div
+                    className="relative w-full h-64 bg-surface-container overflow-hidden border-b border-border-hairline cursor-pointer"
+                    data-action="openCertModal"
+                  >
+                    <img
+                      alt="Cisco CCNAv7 Introduction to Networks"
+                      className="w-full h-full object-contain bg-surface-container-high p-2 group-hover:scale-105 transition-transform duration-500"
+                      data-certificate-order="7"
+                      src="/sertifikat/CNA1.jpg"
+                    />
+                    <div className="absolute top-4 left-4 flex gap-2">
+                      <span className="px-2.5 py-1 bg-surface-card/90 backdrop-blur rounded font-label-code-sm text-label-code-sm font-semibold text-primary">
+                        {"Cisco Networking Academy"}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="p-6 lg:p-8 flex flex-col justify-between grow space-y-4">
+                    <div>
+                      <div className="flex items-center justify-between text-secondary font-label-code-sm text-label-code-sm font-semibold mb-1">
+                        <span className="certificate-issuer">{"CISCO NETWORKING ACADEMY"}</span>
+                        <span className="certificate-date text-outline font-normal font-mono">
+                          {"6 September–31 Desember 2024"}
+                        </span>
+                      </div>
+                      <h3 className="font-headline-sm text-headline-sm text-primary font-bold mb-2">
+                        {"CCNAv7: Introduction to Networks"}
+                      </h3>
+                      <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                        {"Dasar jaringan, pengalamatan, perangkat, dan konektivitas."}
+                      </p>
+                    </div>
+                    <div className="pt-4 border-t border-border-hairline flex items-center justify-between">
+                      <Button
+                        variant="portfolio"
+                        size="reference"
+                        className="inline-flex items-center gap-1.5 px-4 py-2 bg-primary rounded-lg font-body-sm text-body-sm font-medium hover:bg-primary-container transition-colors shadow-sm text-on-primary"
+                        data-action="openCertModal"
+                      >
+                        <span className="">{"Lihat Dokumen Lengkap"}</span>
+                        <span className="material-symbols-outlined text-sm">{"open_in_new"}</span>
+                      </Button>
+                      <span className="font-label-code-sm text-xs text-outline">{"CISCO 2023"}</span>
                     </div>
                   </div>
                 </div>
@@ -2018,11 +2018,14 @@ export function PortfolioPage() {
                 <Button
                   variant="portfolio"
                   size="reference"
-                  className="certificate-show-all-button px-3.5 py-1.5 rounded-lg font-semibold transition-colors flex items-center gap-1.5"
-                  data-action="showAllCertificates()"
+                  id="btn-toggle-all-certificates"
+                  className="certificate-show-all-button px-3.5 py-1.5 rounded-lg border border-border-hairline bg-surface-card hover:bg-surface-subtle text-primary font-semibold transition-colors flex items-center gap-1.5"
+                  data-action="toggleAllCertificates()"
                 >
                   <span className="material-symbols-outlined text-base">{"grid_view"}</span>
-                  <span className="">{"Tampilkan Semua (7 Sertifikat)"}</span>
+                  <span id="toggle-all-certificates-text" className="">
+                    {"Tampilkan Semua (7 Sertifikat)"}
+                  </span>
                 </Button>
               </div>
             </div>

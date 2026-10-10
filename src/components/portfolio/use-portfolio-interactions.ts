@@ -40,21 +40,11 @@ export function usePortfolioInteractions(container: RefObject<HTMLDivElement | n
     const q = <T extends HTMLElement = HTMLElement>(selector: string) =>
       root.querySelector<T>(selector);
     const all = (selector: string) => Array.from(root.querySelectorAll<HTMLElement>(selector));
-    const certificateGrid = q<HTMLElement>("#certificate-grid");
-    if (certificateGrid) {
-      const cards = Array.from(certificateGrid.children);
-      cards
-        .sort((left, right) => {
-          const leftOrder = Number(left.querySelector("img")?.getAttribute("data-certificate-order"));
-          const rightOrder = Number(right.querySelector("img")?.getAttribute("data-certificate-order"));
-          return leftOrder - rightOrder;
-        })
-        .forEach((card) => certificateGrid.append(card));
-    }
     let filter = "all",
       query = "",
       page = 1,
-      showAll = false;
+      showAll = false,
+      showAllCerts = false;
     let lastFocus: HTMLElement | null = null;
     let certificatePages: string[] = [];
     let certificateTitle = "";
@@ -62,6 +52,94 @@ export function usePortfolioInteractions(container: RefObject<HTMLDivElement | n
     const setText = (id: string, text: string) => {
       const el = q("#" + id);
       if (el) el.textContent = text;
+    };
+    const parseCertDateTimestamp = (dateStr: string): number => {
+      if (!dateStr) return 0;
+      const monthMap: Record<string, number> = {
+        januari: 1, jan: 1, january: 1,
+        februari: 2, feb: 2, february: 2,
+        maret: 3, mar: 3, march: 3,
+        april: 4, apr: 4,
+        mei: 5, may: 5,
+        juni: 6, jun: 6, june: 6,
+        juli: 7, jul: 7, july: 7,
+        agustus: 8, agu: 8, aug: 8, august: 8,
+        september: 9, sep: 9, sept: 9,
+        oktober: 10, okt: 10, oct: 10, october: 10,
+        november: 11, nov: 11,
+        desember: 12, des: 12, dec: 12, december: 12,
+      };
+
+      const matches = Array.from(dateStr.matchAll(/\b(20\d\d)\b/g));
+      if (!matches.length) return 0;
+
+      let maxYear = 0;
+      let maxYearIndex = -1;
+      matches.forEach((m) => {
+        const yr = Number(m[1]);
+        if (yr >= maxYear) {
+          maxYear = yr;
+          maxYearIndex = m.index ?? 0;
+        }
+      });
+
+      const textAroundYear = dateStr
+        .slice(Math.max(0, maxYearIndex - 30), maxYearIndex + 10)
+        .toLowerCase();
+
+      let month = 1;
+      for (const [key, val] of Object.entries(monthMap)) {
+        if (textAroundYear.includes(key)) {
+          month = val;
+          break;
+        }
+      }
+
+      const dayMatch = textAroundYear.match(/\b(\d{1,2})\b/);
+      const day = dayMatch ? Number(dayMatch[1]) : 1;
+
+      return maxYear * 10000 + month * 100 + day;
+    };
+
+    const renderCertificates = () => {
+      const certificateGrid = q<HTMLElement>("#certificate-grid");
+      if (!certificateGrid) return;
+      const cards = Array.from(certificateGrid.children) as HTMLElement[];
+      cards
+        .sort((left, right) => {
+          const leftDateStr = left.querySelector(".certificate-date")?.textContent?.trim() || "";
+          const rightDateStr = right.querySelector(".certificate-date")?.textContent?.trim() || "";
+          const leftTs = parseCertDateTimestamp(leftDateStr);
+          const rightTs = parseCertDateTimestamp(rightDateStr);
+
+          if (leftTs !== rightTs) {
+            return rightTs - leftTs; // Newest date first!
+          }
+
+          const leftOrder = Number(
+            left.querySelector("img")?.getAttribute("data-certificate-order") || 999,
+          );
+          const rightOrder = Number(
+            right.querySelector("img")?.getAttribute("data-certificate-order") || 999,
+          );
+          return leftOrder - rightOrder;
+        })
+        .forEach((card) => certificateGrid.append(card));
+
+      cards.forEach((card, index) => {
+        if (showAllCerts || index < 4) {
+          card.classList.remove("hidden");
+        } else {
+          card.classList.add("hidden");
+        }
+      });
+
+      const showAllBtnText = q<HTMLElement>("#toggle-all-certificates-text");
+      if (showAllBtnText) {
+        showAllBtnText.textContent = showAllCerts
+          ? "Tampilkan Lebih Sedikit (4 Sertifikat)"
+          : `Tampilkan Semua (${cards.length} Sertifikat)`;
+      }
     };
     const showCertificatePage = () => {
       const pageUrl = certificatePages[certificatePageIndex];
@@ -268,8 +346,12 @@ export function usePortfolioInteractions(container: RefObject<HTMLDivElement | n
       } else if (action === "certificate-page-next") {
         certificatePageIndex = Math.min(certificatePages.length - 1, certificatePageIndex + 1);
         showCertificatePage();
-      } else if (action === "showAllCertificates()") {
-        q("#certificate-grid")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      } else if (action === "showAllCertificates()" || action === "toggleAllCertificates()") {
+        showAllCerts = !showAllCerts;
+        renderCertificates();
+        if (!showAllCerts) {
+          q("#certificates")?.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
       } else if (action.startsWith("close")) close();
       else if (action.includes("classList.toggle('dark')"))
         document.documentElement.classList.toggle("dark");
@@ -344,6 +426,7 @@ export function usePortfolioInteractions(container: RefObject<HTMLDivElement | n
       }
     });
     renderProjects();
+    renderCertificates();
     root.addEventListener("click", click);
     root.addEventListener("input", input);
     root.addEventListener("submit", submit);
