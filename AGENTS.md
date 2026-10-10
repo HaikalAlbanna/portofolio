@@ -1,0 +1,3 @@
+- Keep the supplied portfolio markup in a dedicated presentation component and its browser interactions in a separate hook so design fidelity and behavior can evolve independently.
+- Use the portfolio Button variant for reference-styled controls so all commands share the existing accessible design-system primitive.
+- The contact form opens a prefilled email draft; do not claim server delivery without connecting an email service.
