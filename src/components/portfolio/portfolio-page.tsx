@@ -84,7 +84,7 @@ export function PortfolioPage() {
               <Button
                 variant="portfolio"
                 size="reference"
-                className="px-2 py-1 rounded bg-surface-card text-primary font-semibold shadow-sm transition-all flex items-center gap-1"
+                className="px-2 py-1 rounded bg-primary text-on-primary font-semibold shadow-sm transition-all flex items-center gap-1"
                 data-action="language-id"
               >
                 <span className="material-symbols-outlined text-xs">{"language"}</span>
@@ -93,10 +93,11 @@ export function PortfolioPage() {
               <Button
                 variant="portfolio"
                 size="reference"
-                className="px-2 py-1 rounded text-on-surface-variant hover:text-primary transition-colors font-medium"
+                className="px-2 py-1 rounded text-on-surface-variant hover:text-primary transition-colors font-medium flex items-center gap-1"
                 data-action="language-en"
               >
-                {"EN"}
+                <span className="material-symbols-outlined text-xs">{"language"}</span>
+                <span className="">{"EN"}</span>
               </Button>
             </div>
             <Button
@@ -334,7 +335,7 @@ export function PortfolioPage() {
                   </div>
 
                   <div className="bg-surface-card p-6 rounded-xl border border-border-hairline shadow-sm hover:border-outline-variant transition-colors flex gap-4">
-                    <div className="w-12 h-12 rounded-lg bg-surface-container-high text-primary flex items-center justify-center shrink-0">
+                    <div className="w-12 h-12 rounded-lg bg-primary/10 text-primary border border-primary/20 flex items-center justify-center shrink-0">
                       <span className="material-symbols-outlined text-2xl">{"domain"}</span>
                     </div>
                     <div>
@@ -1060,7 +1061,7 @@ export function PortfolioPage() {
             id="projects"
           >
             <div className="max-w-7xl mx-auto px-6 lg:px-12">
-              <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+              <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
                 <div className="flex flex-col gap-2 max-w-2xl">
                   <div className="flex items-center gap-2 text-secondary font-label-code-md text-label-code-md font-semibold">
                     <span className="">{"03."}</span>
@@ -1078,58 +1079,60 @@ export function PortfolioPage() {
                   </p>
                 </div>
               </div>
-              <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-8 pb-6 border-b border-border-hairline">
-                <div className="flex flex-wrap items-center gap-2">
-                  <Button
-                    variant="portfolio"
-                    size="reference"
-                    className="px-3.5 py-1.5 rounded-lg text-xs font-label-code-sm font-semibold bg-primary text-on-primary shadow-sm transition-all"
-                    id="filter-all"
-                    data-action="setProjectFilter('all', this)"
-                  >
-                    {"Semua Proyek (6)"}
-                  </Button>
-                  <Button
-                    variant="portfolio"
-                    size="reference"
-                    className="px-3.5 py-1.5 rounded-lg text-xs font-label-code-sm font-medium bg-surface-card border border-border-hairline text-on-surface-variant hover:text-primary hover:bg-surface-subtle transition-all"
-                    id="filter-enterprise"
-                    data-action="setProjectFilter('enterprise', this)"
-                  >
-                    {"Sistem Instansi & Enterprise (3)"}
-                  </Button>
-                  <Button
-                    variant="portfolio"
-                    size="reference"
-                    className="px-3.5 py-1.5 rounded-lg text-xs font-label-code-sm font-medium bg-surface-card border border-border-hairline text-on-surface-variant hover:text-primary hover:bg-surface-subtle transition-all"
-                    id="filter-portal"
-                    data-action="setProjectFilter('portal', this)"
-                  >
-                    {"Web Portal & Publik (2)"}
-                  </Button>
-                  <Button
-                    variant="portfolio"
-                    size="reference"
-                    className="px-3.5 py-1.5 rounded-lg text-xs font-label-code-sm font-medium bg-surface-card border border-border-hairline text-on-surface-variant hover:text-primary hover:bg-surface-subtle transition-all"
-                    id="filter-cloud"
-                    data-action="setProjectFilter('cloud', this)"
-                  >
-                    {"Cloud & Data Analytics (1)"}
-                  </Button>
-                </div>
-                <div className="relative min-w-65 sm:w-72">
-                  <span className="material-symbols-outlined absolute left-3 top-2.5 text-outline text-lg">
-                    {"search"}
-                  </span>
-                  <input
-                    id="project-search-input"
-                    type="text"
-                    placeholder="Cari nama proyek / instansi..."
-                    className="w-full pl-9 pr-3.5 py-2 bg-surface-card border border-border-hairline rounded-lg text-xs font-body-sm text-on-surface placeholder:text-outline-variant focus:outline-none focus:border-primary shadow-sm"
-                  />
-                </div>
-              </div>
               <div id="projects-grid" className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div
+                  className="project-card bg-surface-card rounded-xl border border-border-hairline overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between group"
+                  data-category="personal"
+                  data-page="1"
+                >
+                  <div className="relative w-full h-64 bg-surface-container overflow-hidden">
+                    <img
+                      alt="Job Tracker — Job Application Management System"
+                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                      src="/project/job-tracker.png"
+                    />
+                    <div className="absolute top-4 left-4 flex gap-2">
+                      <span className="px-2.5 py-1 bg-surface-card/90 backdrop-blur rounded font-label-code-sm text-label-code-sm font-semibold text-primary">
+                        {"Personal Project"}
+                      </span>
+                      <span className="px-2.5 py-1 bg-secondary text-on-secondary rounded font-label-code-sm text-label-code-sm font-medium">
+                        {"Web Application"}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="p-6 lg:p-8 flex flex-col justify-between grow">
+                    <div className="space-y-3">
+                      <div className="text-secondary font-label-code-sm text-label-code-sm font-semibold">
+                        {"PERSONAL PROJECT"}
+                      </div>
+                      <h3 className="font-headline-sm text-headline-sm text-primary font-bold">
+                        {"Job Tracker — Job Application Management System"}
+                      </h3>
+                    </div>
+                    <div className="pt-6 mt-6 border-t border-border-hairline flex flex-wrap items-center justify-between gap-3">
+                      <div className="flex items-center gap-2">
+                        <Button
+                          variant="portfolio"
+                          size="reference"
+                          className="inline-flex items-center gap-1.5 px-4 py-2 bg-primary rounded font-body-sm text-body-sm font-medium hover:bg-primary-container transition-colors shadow-sm text-on-primary"
+                          data-action="openProjectModal('job-tracker')"
+                        >
+                          <span className="">{"Detail Proyek"}</span>
+                          <span className="material-symbols-outlined text-sm">{"arrow_forward"}</span>
+                        </Button>
+                      </div>
+                      <a
+                        className="inline-flex items-center gap-1.5 px-3 py-2 text-on-surface-variant hover:text-primary transition-colors font-body-sm text-body-sm"
+                        href="https://github.com/HaikalAlbanna/job-application-tracker"
+                        rel="noreferrer"
+                        target="_blank"
+                      >
+                        <span className="material-symbols-outlined text-base">{"code"}</span>
+                        <span className="">{"Source Code"}</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
                 <div
                   className="project-card bg-surface-card rounded-xl border border-border-hairline overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between group"
                   data-category="enterprise"
@@ -1139,7 +1142,7 @@ export function PortfolioPage() {
                     <img
                       alt="Buku Agenda Surat Digital"
                       className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                      src="https://lh3.googleusercontent.com/aida/AEtjO1WDyohY0UKCK-2iFZGC5nSO97ZaQQW4mdSHRtoLWReCIG5IuGz76qUEnGo3t1K7dvX3az1nQZARBMcC4ezZHQMswNftTNyVf7U93JrjQrstI_rX1xzSp6EOKRzbB8J6t-a5xs0OzQdQz_hjV1vvSYNMU1FGtqiWIBOyISXeCLYezn6kKakmCyw5kOCFQVYZZKyNfOi9BRHRY5zMYNEw6wKtIZUxfwpH-feCp0Z_T8Hlt_w2Yac0Jhvs6L6b"
+                      src="/project/buku-agenda.png"
                     />
                     <div className="absolute top-4 left-4 flex gap-2">
                       <span className="px-2.5 py-1 bg-surface-card/90 backdrop-blur rounded font-label-code-sm text-label-code-sm font-semibold text-primary">
@@ -1159,70 +1162,21 @@ export function PortfolioPage() {
                         {"Buku Agenda Surat Digital"}
                       </h3>
                     </div>
-                    <div className="pt-6 mt-6 border-t border-border-hairline flex items-center justify-between">
-                      <Button
-                        variant="portfolio"
-                        size="reference"
-                        className="inline-flex items-center gap-1.5 px-4 py-2 bg-primary rounded font-body-sm text-body-sm font-medium hover:bg-primary-container transition-colors shadow-sm text-on-primary"
-                        data-action="openProjectModal('agenda-surat')"
-                      >
-                        <span className="">{"Detail Proyek"}</span>
-                        <span className="material-symbols-outlined text-sm">{"arrow_forward"}</span>
-                      </Button>
-                      <a
-                        className="inline-flex items-center gap-1.5 px-3 py-2 text-on-surface-variant hover:text-primary transition-colors font-body-sm text-body-sm"
-                        href="https://github.com/HaikalAlbanna"
-                        rel="noreferrer"
-                        target="_blank"
-                      >
-                        <span className="material-symbols-outlined text-base">{"code"}</span>
-                        <span className="">{"Source Code"}</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="project-card bg-surface-card rounded-xl border border-border-hairline overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between group"
-                  data-category="portal"
-                  data-page="1"
-                >
-                  <div className="relative w-full h-64 bg-surface-container overflow-hidden">
-                    <img
-                      alt="Website Profil Balai Pemasyarakatan OKU Induk"
-                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                      src="https://lh3.googleusercontent.com/aida/AEtjO1VS0CCE21zCmpBmSsK_TzWgEWwU2yogOqQi09U1wBMxFROK5RW5hwiI1zk6V7TqW_kBhAScaflfuCbCxmDGRPxHyjmdsL9aSocx9AMIsbiPSHIyG7ZW87q7QY3XyJTg51Qq3iVY6lbhqVEihXh8TvfUbmt40oFClE_sKaCRpbzrVZUjEdKAGCcs-gOh8v5tvEgwcygvMAboA4iKMR4xq3cqt_tKEZfIyPMkIdmqY5i2oPzUM3-7QPf1mKuI"
-                    />
-                    <div className="absolute top-4 left-4 flex gap-2">
-                      <span className="px-2.5 py-1 bg-surface-card/90 backdrop-blur rounded font-label-code-sm text-label-code-sm font-semibold text-primary">
-                        {"Public Portal"}
-                      </span>
-                      <span className="px-2.5 py-1 bg-status-active text-on-secondary rounded font-label-code-sm text-label-code-sm font-medium">
-                        {"Live Portal"}
-                      </span>
-                    </div>
-                  </div>
-                  <div className="p-6 lg:p-8 flex flex-col justify-between grow">
-                    <div className="space-y-3">
-                      <div className="text-secondary font-label-code-sm text-label-code-sm font-semibold">
-                        {"KEMENIMIPAS RI"}
+                    <div className="pt-6 mt-6 border-t border-border-hairline flex flex-wrap items-center justify-between gap-3">
+                      <div className="flex items-center gap-2">
+                        <Button
+                          variant="portfolio"
+                          size="reference"
+                          className="inline-flex items-center gap-1.5 px-4 py-2 bg-primary rounded font-body-sm text-body-sm font-medium hover:bg-primary-container transition-colors shadow-sm text-on-primary"
+                          data-action="openProjectModal('agenda-surat')"
+                        >
+                          <span className="">{"Detail Proyek"}</span>
+                          <span className="material-symbols-outlined text-sm">{"arrow_forward"}</span>
+                        </Button>
                       </div>
-                      <h3 className="font-headline-sm text-headline-sm text-primary font-bold">
-                        {"Website Profil Balai Pemasyarakatan OKU Induk"}
-                      </h3>
-                    </div>
-                    <div className="pt-6 mt-6 border-t border-border-hairline flex items-center justify-between">
-                      <Button
-                        variant="portfolio"
-                        size="reference"
-                        className="inline-flex items-center gap-1.5 px-4 py-2 bg-primary rounded font-body-sm text-body-sm font-medium hover:bg-primary-container transition-colors shadow-sm text-on-primary"
-                        data-action="openProjectModal('profil-bapas')"
-                      >
-                        <span className="">{"Detail Proyek"}</span>
-                        <span className="material-symbols-outlined text-sm">{"arrow_forward"}</span>
-                      </Button>
                       <a
                         className="inline-flex items-center gap-1.5 px-3 py-2 text-on-surface-variant hover:text-primary transition-colors font-body-sm text-body-sm"
-                        href="https://github.com/HaikalAlbanna"
+                        href="https://github.com/HaikalAlbanna/buku_agenda"
                         rel="noreferrer"
                         target="_blank"
                       >
@@ -1237,303 +1191,45 @@ export function PortfolioPage() {
                   data-category="enterprise"
                   data-page="1"
                 >
-                  <div className="relative w-full h-64 bg-surface-subtle overflow-hidden flex items-center justify-center p-6">
-                    <div className="w-full h-full rounded-lg border border-border-hairline bg-surface-card p-4 flex flex-col justify-between shadow-sm group-hover:scale-105 transition-transform duration-500">
-                      <div className="flex items-center justify-between border-b border-border-hairline pb-2.5">
-                        <div className="flex items-center gap-2">
-                          <span className="material-symbols-outlined text-secondary text-base">
-                            {"verified_user"}
-                          </span>
-                          <span className="font-label-code-sm text-label-code-sm text-primary font-semibold">
-                            {"SIMPEL-MON v1.0"}
-                          </span>
-                        </div>
-                        <span className="px-2 py-0.5 rounded bg-secondary-container/40 text-secondary font-label-code-sm text-[10px] font-semibold">
-                          {"Gov System"}
-                        </span>
-                      </div>
-                      <div className="space-y-2 py-2">
-                        <div className="flex items-center justify-between text-xs">
-                          <span className="text-on-surface-variant font-medium">
-                            {"Capaian SKP Pegawai"}
-                          </span>
-                          <span className="font-label-code-sm font-bold text-primary">
-                            {"98.7% Valid"}
-                          </span>
-                        </div>
-                        <div className="w-full h-2 rounded-full bg-surface-subtle overflow-hidden">
-                          <div className="w-[98%] h-full bg-secondary rounded-full"></div>
-                        </div>
-                        <div className="flex items-center justify-between text-[11px] text-outline font-label-code-sm pt-1">
-                          <span className="">{"Multi-tier Approval"}</span>
-                          <span className="">{"Export PDF & XLSX"}</span>
-                        </div>
-                      </div>
-                      <div className="flex items-center justify-between text-xs text-on-surface-variant font-label-code-sm pt-1 border-t border-border-hairline">
-                        <span className="text-primary font-medium">
-                          {"Role-Based Access (RBAC)"}
-                        </span>
-                        <span className="text-secondary font-mono font-medium">
-                          {"PHP 8.2 • MySQL"}
-                        </span>
-                      </div>
-                    </div>
-                    <div className="absolute top-4 left-4 flex gap-2">
-                      <span className="px-2.5 py-1 bg-surface-card/90 backdrop-blur rounded font-label-code-sm text-label-code-sm font-semibold text-primary">
-                        {"Enterprise Modul"}
-                      </span>
-                      <span className="px-2.5 py-1 bg-surface-subtle text-primary border border-border-hairline rounded font-label-code-sm text-label-code-sm font-medium">
-                        {"Internal Gov"}
-                      </span>
-                    </div>
-                  </div>
-                  <div className="p-6 lg:p-8 flex flex-col justify-between grow">
-                    <div className="space-y-3">
-                      <div className="text-secondary font-label-code-sm text-label-code-sm font-semibold">
-                        {"SISTEM INFORMASI MANAJEMEN"}
-                      </div>
-                      <h3 className="font-headline-sm text-headline-sm text-primary font-bold">
-                        {"SIMPEL-MON: Sistem Monitoring Kinerja Pegawai"}
-                      </h3>
-                    </div>
-                    <div className="pt-6 mt-6 border-t border-border-hairline flex items-center justify-between">
-                      <Button
-                        variant="portfolio"
-                        size="reference"
-                        className="inline-flex items-center gap-1.5 px-4 py-2 bg-primary rounded font-body-sm text-body-sm font-medium hover:bg-primary-container transition-colors shadow-sm text-on-primary"
-                        data-action="openProjectModal('simpel-mon')"
-                      >
-                        <span className="">{"Detail Proyek"}</span>
-                        <span className="material-symbols-outlined text-sm">{"arrow_forward"}</span>
-                      </Button>
-                      <a
-                        className="inline-flex items-center gap-1.5 px-3 py-2 text-on-surface-variant hover:text-primary transition-colors font-body-sm text-body-sm"
-                        href="https://github.com/HaikalAlbanna"
-                        rel="noreferrer"
-                        target="_blank"
-                      >
-                        <span className="material-symbols-outlined text-base">{"code"}</span>
-                        <span className="">{"Source Code"}</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="project-card bg-surface-card rounded-xl border border-border-hairline overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between group"
-                  data-category="cloud"
-                  data-page="1"
-                >
-                  <div className="relative w-full h-64 bg-surface-container-high overflow-hidden flex items-center justify-center p-6 bg-linear-to-t from-primary-container via-surface-card to-surface-subtle">
-                    <div className="w-full h-full rounded-lg border border-border-hairline bg-surface-card/95 backdrop-blur p-4 flex flex-col justify-between shadow-sm group-hover:scale-105 transition-transform duration-500">
-                      <div className="flex items-center justify-between border-b border-border-hairline pb-2.5">
-                        <div className="flex items-center gap-2">
-                          <span className="w-2.5 h-2.5 rounded-full bg-status-active"></span>
-                          <span className="font-label-code-sm text-label-code-sm text-primary font-semibold">
-                            {"Anlytics Pipeline v2.4"}
-                          </span>
-                        </div>
-                        <span className="font-label-code-sm text-[10px] text-outline px-2 py-0.5 rounded bg-surface-subtle">
-                          {"GCP Cloud Run"}
-                        </span>
-                      </div>
-                      <div className="grid grid-cols-3 gap-2 py-2">
-                        <div className="p-2 rounded bg-surface-subtle border border-border-hairline">
-                          <span className="text-[10px] text-outline block">{"REQUESTS"}</span>
-                          <span className="font-label-code-md text-label-code-md font-bold text-primary">
-                            {"142.8k"}
-                          </span>
-                        </div>
-                        <div className="p-2 rounded bg-surface-subtle border border-border-hairline">
-                          <span className="text-[10px] text-outline block">{"AVG LATENCY"}</span>
-                          <span className="font-label-code-md text-label-code-md font-bold text-secondary">
-                            {"38ms"}
-                          </span>
-                        </div>
-                        <div className="p-2 rounded bg-surface-subtle border border-border-hairline">
-                          <span className="text-[10px] text-outline block">{"ACCURACY"}</span>
-                          <span className="font-label-code-md text-label-code-md font-bold text-tech-badge-cyan">
-                            {"99.4%"}
-                          </span>
-                        </div>
-                      </div>
-                      <div className="flex items-center justify-between text-xs text-on-surface-variant font-label-code-sm pt-1">
-                        <span className="flex items-center gap-1">
-                          <span className="material-symbols-outlined text-xs text-status-active">
-                            {"database"}
-                          </span>
-                          {" Cloud SQL MySQL"}
-                        </span>
-                        <span className="text-secondary font-medium">{"Healthy"}</span>
-                      </div>
-                    </div>
-                    <div className="absolute top-4 left-4 flex gap-2">
-                      <span className="px-2.5 py-1 bg-surface-card/90 backdrop-blur rounded font-label-code-sm text-label-code-sm font-semibold text-primary">
-                        {"Data Engine"}
-                      </span>
-                      <span className="px-2.5 py-1 bg-tech-badge-cyan-bg text-tech-badge-cyan rounded font-label-code-sm text-label-code-sm font-medium">
-                        {"Cloud Platform"}
-                      </span>
-                    </div>
-                  </div>
-                  <div className="p-6 lg:p-8 flex flex-col justify-between grow">
-                    <div className="space-y-3">
-                      <div className="text-secondary font-label-code-sm text-label-code-sm font-semibold">
-                        {"BANGKIT CAPSTONE & LLDIKTI"}
-                      </div>
-                      <h3 className="font-headline-sm text-headline-sm text-primary font-bold">
-                        {"Cloud Data Analytics Platform"}
-                      </h3>
-                    </div>
-                    <div className="pt-6 mt-6 border-t border-border-hairline flex items-center justify-between">
-                      <Button
-                        variant="portfolio"
-                        size="reference"
-                        className="inline-flex items-center gap-1.5 px-4 py-2 bg-primary rounded font-body-sm text-body-sm font-medium hover:bg-primary-container transition-colors shadow-sm text-on-primary"
-                        data-action="openProjectModal('cloud-analytics')"
-                      >
-                        <span className="">{"Detail Proyek"}</span>
-                        <span className="material-symbols-outlined text-sm">{"arrow_forward"}</span>
-                      </Button>
-                      <a
-                        className="inline-flex items-center gap-1.5 px-3 py-2 text-on-surface-variant hover:text-primary transition-colors font-body-sm text-body-sm"
-                        href="https://github.com/HaikalAlbanna"
-                        rel="noreferrer"
-                        target="_blank"
-                      >
-                        <span className="material-symbols-outlined text-base">{"code"}</span>
-                        <span className="">{"Source Code"}</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="project-card bg-surface-card rounded-xl border border-border-hairline overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between group"
-                  hidden={true}
-                  data-category="portal"
-                  data-page="2"
-                >
                   <div className="relative w-full h-64 bg-surface-container overflow-hidden">
                     <img
-                      alt="Portal Pelaporan Kinerja Pegawai Terpadu"
+                      alt="Landing Page — Balai Pemasyarakatan OKU Induk"
                       className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                      src="https://lh3.googleusercontent.com/aida/AEtjO1VS0CCE21zCmpBmSsK_TzWgEWwU2yogOqQi09U1wBMxFROK5RW5hwiI1zk6V7TqW_kBhAScaflfuCbCxmDGRPxHyjmdsL9aSocx9AMIsbiPSHIyG7ZW87q7QY3XyJTg51Qq3iVY6lbhqVEihXh8TvfUbmt40oFClE_sKaCRpbzrVZUjEdKAGCcs-gOh8v5tvEgwcygvMAboA4iKMR4xq3cqt_tKEZfIyPMkIdmqY5i2oPzUM3-7QPf1mKuI"
+                      src="/project/landingpage-bapas.png"
                     />
                     <div className="absolute top-4 left-4 flex gap-2">
                       <span className="px-2.5 py-1 bg-surface-card/90 backdrop-blur rounded font-label-code-sm text-label-code-sm font-semibold text-primary">
-                        {"Gov Platform"}
+                        {"Internal System"}
                       </span>
                       <span className="px-2.5 py-1 bg-secondary text-on-secondary rounded font-label-code-sm text-label-code-sm font-medium">
-                        {"Live"}
+                        {"Private System"}
                       </span>
                     </div>
                   </div>
                   <div className="p-6 lg:p-8 flex flex-col justify-between grow">
                     <div className="space-y-3">
                       <div className="text-secondary font-label-code-sm text-label-code-sm font-semibold">
-                        {"LLDIKTI WILAYAH II"}
+                        {"KEMENIMIPAS RI • BAPAS KELAS II OKU INDUK"}
                       </div>
                       <h3 className="font-headline-sm text-headline-sm text-primary font-bold">
-                        {"Portal Pelaporan Kinerja Pegawai Terpadu"}
+                        {"Landing Page — Balai Pemasyarakatan OKU Induk"}
                       </h3>
                     </div>
-                    <div className="pt-6 mt-6 border-t border-border-hairline flex items-center justify-between">
-                      <Button
-                        variant="portfolio"
-                        size="reference"
-                        className="inline-flex items-center gap-1.5 px-4 py-2 bg-primary rounded font-body-sm text-body-sm font-medium hover:bg-primary-container transition-colors shadow-sm text-on-primary"
-                        data-action="openProjectModal('portal-lldikti')"
-                      >
-                        <span className="">{"Detail Proyek"}</span>
-                        <span className="material-symbols-outlined text-sm">{"arrow_forward"}</span>
-                      </Button>
+                    <div className="pt-6 mt-6 border-t border-border-hairline flex flex-wrap items-center justify-between gap-3">
+                      <div className="flex items-center gap-2">
+                        <Button
+                          variant="portfolio"
+                          size="reference"
+                          className="inline-flex items-center gap-1.5 px-4 py-2 bg-primary rounded font-body-sm text-body-sm font-medium hover:bg-primary-container transition-colors shadow-sm text-on-primary"
+                          data-action="openProjectModal('landingpage-bapas')"
+                        >
+                          <span className="">{"Detail Proyek"}</span>
+                          <span className="material-symbols-outlined text-sm">{"arrow_forward"}</span>
+                        </Button>
+                      </div>
                       <a
                         className="inline-flex items-center gap-1.5 px-3 py-2 text-on-surface-variant hover:text-primary transition-colors font-body-sm text-body-sm"
-                        href="https://github.com/HaikalAlbanna"
-                        rel="noreferrer"
-                        target="_blank"
-                      >
-                        <span className="material-symbols-outlined text-base">{"code"}</span>
-                        <span className="">{"Source Code"}</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="project-card bg-surface-card rounded-xl border border-border-hairline overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between group"
-                  hidden={true}
-                  data-category="enterprise"
-                  data-page="2"
-                >
-                  <div className="relative w-full h-64 bg-surface-subtle overflow-hidden flex items-center justify-center p-6">
-                    <div className="w-full h-full rounded-lg border border-border-hairline bg-surface-card p-4 flex flex-col justify-between shadow-sm group-hover:scale-105 transition-transform duration-500">
-                      <div className="flex items-center justify-between border-b border-border-hairline pb-2.5">
-                        <div className="flex items-center gap-2">
-                          <span className="material-symbols-outlined text-primary text-base">
-                            {"psychology"}
-                          </span>
-                          <span className="font-label-code-sm text-label-code-sm text-primary font-semibold">
-                            {"DocClassifier v1.2"}
-                          </span>
-                        </div>
-                        <span className="px-2 py-0.5 rounded bg-surface-subtle text-primary border border-border-hairline font-label-code-sm text-[10px] font-semibold">
-                          {"NLP Pipeline"}
-                        </span>
-                      </div>
-                      <div className="space-y-2 py-2">
-                        <div className="flex items-center justify-between text-xs">
-                          <span className="text-on-surface-variant font-medium">
-                            {"Akurasi Klasifikasi Berkas"}
-                          </span>
-                          <span className="font-label-code-sm font-bold text-secondary">
-                            {"96.8% Precision"}
-                          </span>
-                        </div>
-                        <div className="w-full h-2 rounded-full bg-surface-subtle overflow-hidden">
-                          <div className="w-[96%] h-full bg-status-active rounded-full"></div>
-                        </div>
-                        <div className="flex items-center justify-between text-[11px] text-outline font-label-code-sm pt-1">
-                          <span className="">{"Multi-format OCR"}</span>
-                          <span className="">{"Auto Tagging Metadata"}</span>
-                        </div>
-                      </div>
-                      <div className="flex items-center justify-between text-xs text-on-surface-variant font-label-code-sm pt-1 border-t border-border-hairline">
-                        <span className="text-primary font-medium">
-                          {"Python FastAPI • Docker"}
-                        </span>
-                        <span className="text-secondary font-mono font-medium">{"PostgreSQL"}</span>
-                      </div>
-                    </div>
-                    <div className="absolute top-4 left-4 flex gap-2">
-                      <span className="px-2.5 py-1 bg-surface-card/90 backdrop-blur rounded font-label-code-sm text-label-code-sm font-semibold text-primary">
-                        {"AI & Data Workflow"}
-                      </span>
-                      <span className="px-2.5 py-1 bg-tech-badge-cyan-bg text-tech-badge-cyan rounded font-label-code-sm text-label-code-sm font-medium">
-                        {"Research"}
-                      </span>
-                    </div>
-                  </div>
-                  <div className="p-6 lg:p-8 flex flex-col justify-between grow">
-                    <div className="space-y-3">
-                      <div className="text-secondary font-label-code-sm text-label-code-sm font-semibold">
-                        {"MAGANGHUB KEMNAKER RI"}
-                      </div>
-                      <h3 className="font-headline-sm text-headline-sm text-primary font-bold">
-                        {"Sistem Klasifikasi Dokumen Otomatis"}
-                      </h3>
-                    </div>
-                    <div className="pt-6 mt-6 border-t border-border-hairline flex items-center justify-between">
-                      <Button
-                        variant="portfolio"
-                        size="reference"
-                        className="inline-flex items-center gap-1.5 px-4 py-2 bg-primary rounded font-body-sm text-body-sm font-medium hover:bg-primary-container transition-colors shadow-sm text-on-primary"
-                        data-action="openProjectModal('doc-classifier')"
-                      >
-                        <span className="">{"Detail Proyek"}</span>
-                        <span className="material-symbols-outlined text-sm">{"arrow_forward"}</span>
-                      </Button>
-                      <a
-                        className="inline-flex items-center gap-1.5 px-3 py-2 text-on-surface-variant hover:text-primary transition-colors font-body-sm text-body-sm"
-                        href="https://github.com/HaikalAlbanna"
+                        href="https://github.com/HaikalAlbanna/Landingpage-BAPAS"
                         rel="noreferrer"
                         target="_blank"
                       >
@@ -1544,56 +1240,17 @@ export function PortfolioPage() {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 mt-10 border-t border-border-hairline font-label-code-sm text-label-code-sm text-on-surface-variant">
-                <div className="flex items-center gap-2" id="project-pagination-controls">
-                  <Button
-                    variant="portfolio"
-                    size="reference"
-                    id="btn-project-page-prev"
-                    className="px-3 py-1.5 rounded-lg border border-border-hairline bg-surface-card text-on-surface-variant disabled:opacity-40 transition-colors"
-                    disabled={true}
-                    data-action="changeProjectPage(1)"
-                  >
-                    {"< Sebelumnya"}
-                  </Button>
-                  <Button
-                    variant="portfolio"
-                    size="reference"
-                    id="btn-project-page-1"
-                    className="px-3 py-1.5 rounded-lg bg-primary text-on-primary font-semibold transition-colors"
-                    data-action="changeProjectPage(1)"
-                  >
-                    {"1"}
-                  </Button>
-                  <Button
-                    variant="portfolio"
-                    size="reference"
-                    id="btn-project-page-2"
-                    className="px-3 py-1.5 rounded-lg border border-border-hairline bg-surface-card hover:bg-surface-subtle text-on-surface transition-colors"
-                    data-action="changeProjectPage(2)"
-                  >
-                    {"2"}
-                  </Button>
-                  <Button
-                    variant="portfolio"
-                    size="reference"
-                    id="btn-project-page-next"
-                    className="px-3 py-1.5 rounded-lg border border-border-hairline bg-surface-card hover:bg-surface-subtle text-on-surface transition-colors"
-                    data-action="changeProjectPage(2)"
-                  >
-                    {"Berikutnya >"}
-                  </Button>
-                </div>
+              <div className="flex items-center justify-end pt-8 mt-10 border-t border-border-hairline font-label-code-sm text-label-code-sm text-on-surface-variant">
                 <Button
                   variant="portfolio"
                   size="reference"
                   id="btn-toggle-all-projects"
-                  className="px-3.5 py-1.5 rounded-lg border border-border-hairline bg-surface-card hover:bg-surface-subtle text-primary font-semibold transition-colors flex items-center gap-1.5"
+                  className="px-4 py-2 rounded-lg border border-border-hairline bg-surface-card hover:bg-surface-subtle text-primary font-semibold transition-colors flex items-center gap-1.5 shadow-sm"
                   data-action="toggleAllProjects()"
                 >
                   <span className="material-symbols-outlined text-base">{"grid_view"}</span>
                   <span id="toggle-all-projects-text" className="">
-                    {"Tampilkan Semua (6 Proyek)"}
+                    {"Tampilkan Semua"}
                   </span>
                 </Button>
               </div>
@@ -2114,8 +1771,7 @@ export function PortfolioPage() {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 mt-10 border-t border-border-hairline font-label-code-sm text-label-code-sm text-on-surface-variant">
-                <div className="flex items-center gap-2"></div>
+              <div className="flex items-center justify-end pt-8 mt-10 border-t border-border-hairline font-label-code-sm text-label-code-sm text-on-surface-variant">
                 <Button
                   variant="portfolio"
                   size="reference"
@@ -2125,7 +1781,7 @@ export function PortfolioPage() {
                 >
                   <span className="material-symbols-outlined text-base">{"grid_view"}</span>
                   <span id="toggle-all-certificates-text" className="">
-                    {"Tampilkan Semua (7 Sertifikat)"}
+                    {"Tampilkan Semua"}
                   </span>
                 </Button>
               </div>
@@ -2437,7 +2093,7 @@ export function PortfolioPage() {
                 id="pm-image"
                 alt="Preview Proyek"
                 className="w-full h-full object-cover object-top"
-                src="https://lh3.googleusercontent.com/aida/AEtjO1WDyohY0UKCK-2iFZGC5nSO97ZaQQW4mdSHRtoLWReCIG5IuGz76qUEnGo3t1K7dvX3az1nQZARBMcC4ezZHQMswNftTNyVf7U93JrjQrstI_rX1xzSp6EOKRzbB8J6t-a5xs0OzQdQz_hjV1vvSYNMU1FGtqiWIBOyISXeCLYezn6kKakmCyw5kOCFQVYZZKyNfOi9BRHRY5zMYNEw6wKtIZUxfwpH-feCp0Z_T8Hlt_w2Yac0Jhvs6L6b"
+                src="/project/buku-agenda.png"
               />
               <div className="absolute bottom-4 left-4 px-3 py-1.5 rounded-lg bg-surface-card/90 backdrop-blur border border-border-hairline text-primary font-label-code-sm text-xs font-semibold flex items-center gap-2">
                 <span className="material-symbols-outlined text-secondary text-base">
@@ -2457,7 +2113,7 @@ export function PortfolioPage() {
                 className="font-body-md text-body-md text-on-surface-variant leading-relaxed"
               >
                 {
-                  "Platform digital terintegrasi yang dirancang khusus untuk memodernisasi sistem tata kelola persuratan dinas dan pengarsipan birokrasi di lingkungan Balai Pemasyarakatan Kelas II OKU Induk. Sistem ini menggantikan pencatatan manual berbasis buku fisik dengan arsitektur web modern yang menjamin kecepatan penelusuran dokumen, akurasi penomoran surat otomatis terstandar, serta keamanan data persuratan aparatur sipil."
+                  "Aplikasi web Buku Agenda Surat Digital yang dikembangkan untuk mendukung pengelolaan administrasi persuratan di lingkungan Balai Pemasyarakatan Kelas II OKU Induk. Sistem ini dirancang untuk mempermudah pencatatan agenda surat, pengelolaan data persuratan, serta penyajian informasi secara digital agar proses administrasi menjadi lebih terstruktur dan efisien."
                 }
               </p>
             </div>
@@ -2477,10 +2133,7 @@ export function PortfolioPage() {
                     {"done"}
                   </span>
                   <span className="">
-                    <strong>{"Penomoran Surat Dinas Otomatis:"}</strong>
-                    {
-                      " Penghasil nomor surat berurutan sesuai pola tata naskah dinas kementerian secara real-time."
-                    }
+                    {"Pencatatan dan pengelolaan data agenda surat secara digital."}
                   </span>
                 </li>
                 <li className="flex items-start gap-2.5">
@@ -2488,10 +2141,7 @@ export function PortfolioPage() {
                     {"done"}
                   </span>
                   <span className="">
-                    <strong>{"Digitalisasi & Pengarsipan Berkas:"}</strong>
-                    {
-                      " Penyimpanan berkas PDF surat masuk dan keluar secara terstruktur dengan fitur penelusuran instan."
-                    }
+                    {"Antarmuka web yang responsif dan mudah digunakan."}
                   </span>
                 </li>
                 <li className="flex items-start gap-2.5">
@@ -2499,8 +2149,15 @@ export function PortfolioPage() {
                     {"done"}
                   </span>
                   <span className="">
-                    <strong>{"Role-Based Access Control (RBAC):"}</strong>
-                    {" Hak akses tersegregasi antara Tata Usaha dan Pejabat Penandatangan."}
+                    {"Penyajian informasi agenda surat secara terstruktur."}
+                  </span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <span className="material-symbols-outlined text-secondary text-base mt-1">
+                    {"done"}
+                  </span>
+                  <span className="">
+                    {"Digitalisasi proses administrasi untuk mendukung pengelolaan dokumen dan pencatatan persuratan."}
                   </span>
                 </li>
               </ul>
@@ -2584,8 +2241,19 @@ export function PortfolioPage() {
             </div>
             <div className="flex items-center gap-3">
               <a
+                id="pm-demo-link"
+                className="inline-flex items-center gap-2 px-4 py-2 border border-border-hairline bg-surface-subtle hover:bg-surface-card rounded-lg font-body-sm text-body-sm font-medium text-primary transition-colors shadow-sm"
+                href="https://buku-agenda-xi.vercel.app/login"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <span className="material-symbols-outlined text-base text-secondary">{"open_in_new"}</span>
+                <span className="">{"Demo Proyek"}</span>
+              </a>
+              <a
+                id="pm-github-link"
                 className="inline-flex items-center gap-2 px-4 py-2 border border-border-hairline bg-surface-card rounded-lg font-body-sm text-body-sm font-medium text-on-surface hover:bg-surface-subtle transition-colors"
-                href="https://github.com/HaikalAlbanna"
+                href="https://github.com/HaikalAlbanna/buku_agenda"
                 rel="noreferrer"
                 target="_blank"
               >
@@ -2716,14 +2384,14 @@ export function PortfolioPage() {
             </div>
             <div className="flex items-center gap-3">
               <a
-                className="inline-flex items-center gap-2 px-4 py-2 border border-border-hairline bg-surface-card rounded-lg font-body-sm text-body-sm font-medium text-on-surface hover:bg-surface-subtle transition-colors"
-                href="https://lh3.googleusercontent.com/aida/AEtjO1VsyrBbsGyPdZMjoNldtswax2iZhkTMEuMW46pmbnhoGqr65vpY_Y2yGZImGV31uvmqvPxKTXU3NPyHdp29jYucvxz8Lno1RWhO52oUn9bY50WjL7V8STXFEKVpMn7bAZmkxM8uhN2OVxqy4_k_P7hB8sY3auETYzWuIQctnaCKGDjc5vwqZnTF7KA5Bg9T9NbH4hJWKUzsLXsWmSeEU_yPkQy7f23JE_1xNEBAaV4yhJfUnDlf5Rf_-lI"
+                className="inline-flex items-center gap-2 px-4 py-2 border border-border-hairline bg-surface-card rounded-lg font-body-sm text-body-sm font-medium text-on-surface hover:bg-surface-subtle transition-colors shadow-sm"
+                href="#"
                 id="cert-modal-download"
                 rel="noreferrer"
                 target="_blank"
               >
-                <span className="material-symbols-outlined text-base">{"download"}</span>
-                <span className="">{"Unduh Berkas PDF"}</span>
+                <span className="material-symbols-outlined text-base text-secondary">{"open_in_new"}</span>
+                <span className="cert-modal-download-text">{"Buka Gambar Asli"}</span>
               </a>
               <Button
                 variant="portfolio"

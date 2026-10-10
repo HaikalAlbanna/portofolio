@@ -137,8 +137,8 @@ export function usePortfolioInteractions(container: RefObject<HTMLDivElement | n
       const showAllBtnText = q<HTMLElement>("#toggle-all-certificates-text");
       if (showAllBtnText) {
         showAllBtnText.textContent = showAllCerts
-          ? "Tampilkan Lebih Sedikit (4 Sertifikat)"
-          : `Tampilkan Semua (${cards.length} Sertifikat)`;
+          ? "Tampilkan Lebih Sedikit"
+          : "Tampilkan Semua";
       }
     };
     const showCertificatePage = () => {
@@ -162,9 +162,27 @@ export function usePortfolioInteractions(container: RefObject<HTMLDivElement | n
       const download = q<HTMLAnchorElement>("#cert-modal-download");
       if (download) {
         download.href = pageUrl;
-        download.textContent = certificatePages.length > 1
+        const iconSpan = download.querySelector(".material-symbols-outlined");
+        if (iconSpan) {
+          iconSpan.textContent = "open_in_new";
+        }
+        const textSpan = download.querySelector<HTMLElement>(".cert-modal-download-text, span:not(.material-symbols-outlined)");
+        const labelText = certificatePages.length > 1
           ? `Buka Halaman ${certificatePageIndex + 1}`
           : "Buka Gambar Asli";
+        if (textSpan) {
+          textSpan.textContent = labelText;
+        } else {
+          download.replaceChildren();
+          const icon = document.createElement("span");
+          icon.className = "material-symbols-outlined text-base text-secondary";
+          icon.textContent = "open_in_new";
+          const label = document.createElement("span");
+          label.className = "cert-modal-download-text";
+          label.textContent = labelText;
+          download.appendChild(icon);
+          download.appendChild(label);
+        }
       }
     };
     const selectButton = (el: HTMLElement, selected: boolean) => {
@@ -204,7 +222,7 @@ export function usePortfolioInteractions(container: RefObject<HTMLDivElement | n
       if (next) next.disabled = showAll || page >= pages;
       setText(
         "toggle-all-projects-text",
-        showAll ? "Mode Paginasi (4 per Halaman)" : `Tampilkan Semua (${matches.length} Proyek)`,
+        showAll ? "Tampilkan Lebih Sedikit" : "Tampilkan Semua",
       );
       let empty = q("[data-empty='projects']");
       if (!empty) {
@@ -300,12 +318,32 @@ export function usePortfolioInteractions(container: RefObject<HTMLDivElement | n
           img.src = d.img;
           img.alt = d.title;
         }
+        const githubLink = q<HTMLAnchorElement>("#pm-github-link");
+        if (githubLink) {
+          githubLink.href = ("githubUrl" in d && d.githubUrl) ? (d.githubUrl as string) : "https://github.com/HaikalAlbanna";
+        }
+        const demoLink = q<HTMLAnchorElement>("#pm-demo-link");
+        if (demoLink) {
+          if ("demoUrl" in d && d.demoUrl) {
+            demoLink.href = d.demoUrl as string;
+            demoLink.style.display = "inline-flex";
+          } else {
+            demoLink.style.display = "none";
+          }
+        }
         const features = q("#pm-features");
         if (features) {
           features.replaceChildren(
             ...d.features.map((f) => {
               const li = document.createElement("li");
-              li.textContent = "✓  " + f;
+              li.className = "flex items-start gap-2.5";
+              const icon = document.createElement("span");
+              icon.className = "material-symbols-outlined text-secondary text-base mt-1";
+              icon.textContent = "done";
+              const span = document.createElement("span");
+              span.textContent = f;
+              li.appendChild(icon);
+              li.appendChild(span);
               return li;
             }),
           );
@@ -365,9 +403,18 @@ export function usePortfolioInteractions(container: RefObject<HTMLDivElement | n
           node.textContent = english ? translations[text.trim()] || text : text;
         });
         document.documentElement.lang = english ? "en" : "id";
-        all('[data-action^="language-"]').forEach((el) =>
-          selectButton(el, el.dataset["action"] === action),
-        );
+        all('[data-action^="language-"]').forEach((el) => {
+          const isSelected = el.dataset["action"] === action;
+          el.classList.toggle("bg-primary", isSelected);
+          el.classList.toggle("text-on-primary", isSelected);
+          el.classList.toggle("font-semibold", isSelected);
+          el.classList.toggle("shadow-sm", isSelected);
+          el.classList.toggle("bg-surface-card", false);
+          el.classList.toggle("text-primary", false);
+          el.classList.toggle("text-on-surface-variant", !isSelected);
+          el.classList.toggle("font-medium", !isSelected);
+          el.setAttribute("aria-pressed", String(isSelected));
+        });
       } else if (action.startsWith("navigator.clipboard")) {
         try {
           await navigator.clipboard.writeText("haikalalbanna2313@gmail.com");
