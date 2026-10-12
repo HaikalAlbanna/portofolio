@@ -181,13 +181,13 @@ export function PortfolioPage() {
                     <span className="font-mono text-outline font-medium">
                       {"<Haikal_Profile.vue />"}
                     </span>
-                    <span className="text-secondary font-mono">{"STATUS: 200 OK"}</span>
+
                   </div>
 
                   <div className="relative w-full h-105 rounded-lg overflow-hidden bg-surface-container">
                     <img
                       alt="Haikal Tirta Albanna"
-                      className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500"
                       src="/profil.jpg"
                     />
                     <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent pointer-events-none"></div>
@@ -1879,7 +1879,7 @@ export function PortfolioPage() {
             <span className="">
               {"<Haikal Tirta Albanna /> • Built with precision & modern engineering standards."}
             </span>
-            <span className="">{"Copyright © 2025 Haikal Albanna. All rights reserved."}</span>
+            <span className="">{"Copyright © 2026 Haikal Albanna. All rights reserved."}</span>
           </div>
         </div>
       </main>
