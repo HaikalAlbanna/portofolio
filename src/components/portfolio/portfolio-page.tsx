@@ -224,9 +224,6 @@ export function PortfolioPage() {
                   <span className="">{"01."}</span>
                   <span className="">{"TENTANG SAYA"}</span>
                 </div>
-                <h2 className="font-headline-lg text-headline-lg text-primary font-bold">
-                  {"\n          Mengubah ide menjadi aplikasi yang bermanfaat.\n        "}
-                </h2>
               </div>
 
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
@@ -330,9 +327,6 @@ export function PortfolioPage() {
                   <span className="">{"02."}</span>
                   <span className="">{"KEAHLIAN TEKNOLOGI & TECH ARSENAL"}</span>
                 </div>
-                <h2 className="font-headline-lg text-headline-lg text-primary font-bold tracking-tight">
-                  {"Perangkat & disiplin yang saya kuasai."}
-                </h2>
               </div>
             </div>
             <div className="grid grid-cols-1 gap-8">
@@ -1036,16 +1030,6 @@ export function PortfolioPage() {
                     <span className="">{"03."}</span>
                     <span className="">{"PROYEK UNGGULAN"}</span>
                   </div>
-                  <h2 className="font-headline-lg text-headline-lg text-primary font-bold">
-                    {
-                      "Implementasi nyata penyelesaian masalah data & transformasi digital instansi."
-                    }
-                  </h2>
-                  <p className="font-body-md text-body-md text-on-surface-variant">
-                    {
-                      "Rancang bangun sistem enterprise, otomatisasi administrasi instansi, dan arsitektur analitik cloud berkinerja tinggi."
-                    }
-                  </p>
                 </div>
               </div>
               <div id="projects-grid" className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -1054,10 +1038,10 @@ export function PortfolioPage() {
                   data-category="personal"
                   data-page="1"
                 >
-                  <div className="relative w-full h-64 bg-surface-container overflow-hidden">
+                  <div className="relative w-full h-64 bg-surface-container overflow-hidden flex items-center justify-center">
                     <img
                       alt="Job Tracker — Job Application Management System"
-                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500"
                       src="/project/job-tracker.png"
                     />
                     <div className="absolute top-4 left-4 flex gap-2">
@@ -1090,15 +1074,6 @@ export function PortfolioPage() {
                           <span className="material-symbols-outlined text-sm">{"arrow_forward"}</span>
                         </Button>
                       </div>
-                      <a
-                        className="inline-flex items-center gap-1.5 px-3 py-2 text-on-surface-variant hover:text-primary transition-colors font-body-sm text-body-sm"
-                        href="https://github.com/HaikalAlbanna/job-application-tracker"
-                        rel="noreferrer"
-                        target="_blank"
-                      >
-                        <span className="material-symbols-outlined text-base">{"code"}</span>
-                        <span className="">{"Source Code"}</span>
-                      </a>
                     </div>
                   </div>
                 </div>
@@ -1107,10 +1082,10 @@ export function PortfolioPage() {
                   data-category="enterprise"
                   data-page="1"
                 >
-                  <div className="relative w-full h-64 bg-surface-container overflow-hidden">
+                  <div className="relative w-full h-64 bg-surface-container overflow-hidden flex items-center justify-center">
                     <img
                       alt="Buku Agenda Surat Digital"
-                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500"
                       src="/project/buku-agenda.png"
                     />
                     <div className="absolute top-4 left-4 flex gap-2">
@@ -1143,15 +1118,6 @@ export function PortfolioPage() {
                           <span className="material-symbols-outlined text-sm">{"arrow_forward"}</span>
                         </Button>
                       </div>
-                      <a
-                        className="inline-flex items-center gap-1.5 px-3 py-2 text-on-surface-variant hover:text-primary transition-colors font-body-sm text-body-sm"
-                        href="https://github.com/HaikalAlbanna/buku_agenda"
-                        rel="noreferrer"
-                        target="_blank"
-                      >
-                        <span className="material-symbols-outlined text-base">{"code"}</span>
-                        <span className="">{"Source Code"}</span>
-                      </a>
                     </div>
                   </div>
                 </div>
@@ -1160,10 +1126,10 @@ export function PortfolioPage() {
                   data-category="enterprise"
                   data-page="1"
                 >
-                  <div className="relative w-full h-64 bg-surface-container overflow-hidden">
+                  <div className="relative w-full h-64 bg-surface-container overflow-hidden flex items-center justify-center">
                     <img
                       alt="Landing Page — Balai Pemasyarakatan OKU Induk"
-                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500"
                       src="/project/landingpage-bapas.png"
                     />
                     <div className="absolute top-4 left-4 flex gap-2">
@@ -1196,15 +1162,6 @@ export function PortfolioPage() {
                           <span className="material-symbols-outlined text-sm">{"arrow_forward"}</span>
                         </Button>
                       </div>
-                      <a
-                        className="inline-flex items-center gap-1.5 px-3 py-2 text-on-surface-variant hover:text-primary transition-colors font-body-sm text-body-sm"
-                        href="https://github.com/HaikalAlbanna/Landingpage-BAPAS"
-                        rel="noreferrer"
-                        target="_blank"
-                      >
-                        <span className="material-symbols-outlined text-base">{"code"}</span>
-                        <span className="">{"Source Code"}</span>
-                      </a>
                     </div>
                   </div>
                 </div>
@@ -1234,14 +1191,6 @@ export function PortfolioPage() {
                     <span className="">{"04."}</span>
                     <span className="">{"PENGALAMAN KERJA & KONTRIBUSI"}</span>
                   </div>
-                  <h2 className="font-headline-lg text-headline-lg text-primary font-bold tracking-tight">
-                    {"Jejak rekam profesional dan kontribusi nyata"}
-                  </h2>
-                  <p className="font-body-md text-body-md text-on-surface-variant">
-                    {
-                      "Pengalaman langsung pada instansi pemerintah dan program akselerasi teknologi nasional."
-                    }
-                  </p>
                 </div>
               </div>
               <div className="relative w-full py-4">
@@ -1377,14 +1326,6 @@ export function PortfolioPage() {
                     <span className="">{"05."}</span>
                     <span className="">{"SERTIFIKASI & KREDENSIAL RESMI"}</span>
                   </div>
-                  <h2 className="font-headline-lg text-headline-lg text-primary font-bold">
-                    {"Dokumentasi pencapaian kompetensi & kelulusan program terstandarisasi."}
-                  </h2>
-                  <p className="font-body-md text-body-md text-on-surface-variant">
-                    {
-                      "Portofolio lisensi, kredensial kementerian, dan kelulusan program akselerasi digital bereputasi nasional."
-                    }
-                  </p>
                 </div>
               </div>
               <div id="certificate-grid" className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -1402,10 +1343,10 @@ export function PortfolioPage() {
                     />
                     <div className="absolute top-4 left-4 flex gap-2">
                       <span className="px-2.5 py-1 bg-surface-card/90 backdrop-blur rounded font-label-code-sm text-label-code-sm font-semibold text-primary">
-                        {"MagangHub"}
-                      </span>
-                      <span className="px-2.5 py-1 bg-status-active text-on-secondary rounded font-label-code-sm text-label-code-sm font-medium">
                         {"Bapas Kelas II OKU Induk"}
+                      </span>
+                      <span className="px-2.5 py-1 bg-secondary text-on-secondary rounded font-label-code-sm text-label-code-sm font-medium">
+                        {"MagangHub Batch 3 2026"}
                       </span>
                     </div>
                   </div>
@@ -1436,11 +1377,10 @@ export function PortfolioPage() {
                         <span className="">{"Lihat Dokumen Lengkap"}</span>
                         <span className="material-symbols-outlined text-sm">{"open_in_new"}</span>
                       </Button>
-                      <span className="font-label-code-sm text-xs text-outline">{"BAPAS OKU"}</span>
                     </div>
                   </div>
                 </div>
-                <div className="bg-surface-card rounded-xl border border-border-hairline overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                <div className="bg-surface-card rounded-xl border border-border-hairline overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between group" data-button-text="Bapas Kelas II OKU Induk">
                   <div
                     className="relative w-full h-64 bg-surface-container overflow-hidden border-b border-border-hairline cursor-pointer"
                     data-action="openCertModal"
@@ -1485,13 +1425,10 @@ export function PortfolioPage() {
                         <span className="">{"Lihat Dokumen Lengkap"}</span>
                         <span className="material-symbols-outlined text-sm">{"open_in_new"}</span>
                       </Button>
-                      <span className="font-label-code-sm text-xs text-outline">
-                        {"MAGANGHUB 2026"}
-                      </span>
                     </div>
                   </div>
                 </div>
-                <div className="bg-surface-card rounded-xl border border-border-hairline overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                <div className="bg-surface-card rounded-xl border border-border-hairline overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between group" data-button-text="Bangkit Academy">
                   <div
                     className="relative w-full h-64 bg-surface-container overflow-hidden border-b border-border-hairline cursor-pointer"
                     data-action="openCertModal"
@@ -1538,13 +1475,10 @@ export function PortfolioPage() {
                         <span className="">{"Lihat Dokumen Lengkap"}</span>
                         <span className="material-symbols-outlined text-sm">{"open_in_new"}</span>
                       </Button>
-                      <span className="font-label-code-sm text-xs text-outline">
-                        {"KEMENDIKBUDRISTEK 2024"}
-                      </span>
                     </div>
                   </div>
                 </div>
-                <div className="bg-surface-card rounded-xl border border-border-hairline overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                <div className="bg-surface-card rounded-xl border border-border-hairline overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between group" data-button-text="LLDIKTI Wilayah II">
                   <div
                     className="relative w-full h-64 bg-surface-container overflow-hidden border-b border-border-hairline cursor-pointer"
                     data-action="openCertModal"
@@ -1591,13 +1525,10 @@ export function PortfolioPage() {
                         <span className="">{"Lihat Dokumen Lengkap"}</span>
                         <span className="material-symbols-outlined text-sm">{"open_in_new"}</span>
                       </Button>
-                      <span className="font-label-code-sm text-xs text-outline">
-                        {"KEMENDIKBUDRISTEK 2024"}
-                      </span>
                     </div>
                   </div>
                 </div>
-                <div className="bg-surface-card rounded-xl border border-border-hairline overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                <div className="bg-surface-card rounded-xl border border-border-hairline overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between group" data-button-text="Switching, Routing, and Wireless Essentials">
                   <div
                     className="relative w-full h-64 bg-surface-container overflow-hidden border-b border-border-hairline cursor-pointer"
                     data-action="openCertModal"
@@ -1611,6 +1542,9 @@ export function PortfolioPage() {
                     <div className="absolute top-4 left-4 flex gap-2">
                       <span className="px-2.5 py-1 bg-surface-card/90 backdrop-blur rounded font-label-code-sm text-label-code-sm font-semibold text-primary">
                         {"Cisco Networking Academy"}
+                      </span>
+                      <span className="px-2.5 py-1 bg-secondary text-on-secondary rounded font-label-code-sm text-label-code-sm font-medium">
+                        {"CCNAv7"}
                       </span>
                     </div>
                   </div>
@@ -1639,11 +1573,10 @@ export function PortfolioPage() {
                         <span className="">{"Lihat Dokumen Lengkap"}</span>
                         <span className="material-symbols-outlined text-sm">{"open_in_new"}</span>
                       </Button>
-                      <span className="font-label-code-sm text-xs text-outline">{"CISCO 2024"}</span>
                     </div>
                   </div>
                 </div>
-                <div className="bg-surface-card rounded-xl border border-border-hairline overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                <div className="bg-surface-card rounded-xl border border-border-hairline overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between group" data-button-text="Bangkit Academy">
                   <div
                     className="relative w-full h-64 bg-surface-container overflow-hidden border-b border-border-hairline cursor-pointer"
                     data-action="openCertModal"
@@ -1660,7 +1593,7 @@ export function PortfolioPage() {
                         {"Bangkit Academy"}
                       </span>
                       <span className="px-2.5 py-1 bg-secondary text-on-secondary rounded font-label-code-sm text-label-code-sm font-medium">
-                        {"2 Halaman"}
+                        {"MSIB Batch 7"}
                       </span>
                     </div>
                   </div>
@@ -1689,11 +1622,10 @@ export function PortfolioPage() {
                         <span className="">{"Lihat Dokumen Lengkap"}</span>
                         <span className="material-symbols-outlined text-sm">{"open_in_new"}</span>
                       </Button>
-                      <span className="font-label-code-sm text-xs text-outline">{"BANGKIT 2023"}</span>
                     </div>
                   </div>
                 </div>
-                <div className="bg-surface-card rounded-xl border border-border-hairline overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                <div className="bg-surface-card rounded-xl border border-border-hairline overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between group" data-button-text="CISCO NETWORKING ACADEMY">
                   <div
                     className="relative w-full h-64 bg-surface-container overflow-hidden border-b border-border-hairline cursor-pointer"
                     data-action="openCertModal"
@@ -1707,6 +1639,9 @@ export function PortfolioPage() {
                     <div className="absolute top-4 left-4 flex gap-2">
                       <span className="px-2.5 py-1 bg-surface-card/90 backdrop-blur rounded font-label-code-sm text-label-code-sm font-semibold text-primary">
                         {"Cisco Networking Academy"}
+                      </span>
+                      <span className="px-2.5 py-1 bg-secondary text-on-secondary rounded font-label-code-sm text-label-code-sm font-medium">
+                        {"CCNAv7"}
                       </span>
                     </div>
                   </div>
@@ -1735,7 +1670,6 @@ export function PortfolioPage() {
                         <span className="">{"Lihat Dokumen Lengkap"}</span>
                         <span className="material-symbols-outlined text-sm">{"open_in_new"}</span>
                       </Button>
-                      <span className="font-label-code-sm text-xs text-outline">{"CISCO 2023"}</span>
                     </div>
                   </div>
                 </div>
@@ -1763,11 +1697,6 @@ export function PortfolioPage() {
                 <span className="">{"06."}</span>
                 <span className="">{"MARI BERKOLABORASI"}</span>
               </div>
-              <h2 className="font-headline-lg text-headline-lg text-primary font-bold">
-                {
-                  "\n        Terbuka untuk peluang kerja full-time, kontrak, maupun kemitraan proyek sistem.\n      "
-                }
-              </h2>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
               <div className="lg:col-span-5 flex flex-col gap-6">
@@ -1847,7 +1776,9 @@ export function PortfolioPage() {
                       rel="noreferrer"
                       target="_blank"
                     >
-                      <span className="material-symbols-outlined text-xl">{"camera_alt"}</span>
+                      <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path>
+                      </svg>
                       <span className="">{"Instagram"}</span>
                     </a>
                   </div>
@@ -1952,55 +1883,7 @@ export function PortfolioPage() {
           </div>
         </div>
       </main>
-      <footer className="w-full bg-surface-container-lowest border-t border-border-hairline py-12">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex flex-col items-center md:items-start gap-1">
-            <span className="font-label-code-md text-label-code-md font-semibold text-primary">
-              {"<Haikal.dev />"}
-            </span>
-            <p className="font-body-sm text-body-sm text-on-surface-variant">
-              {
-                "Full-Stack Developer & Data Analyst engineering scalable web software and data pipelines."
-              }
-            </p>
-          </div>
-          <div className="flex items-center gap-6">
-            <a
-              className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
-              data-path="overview"
-              href="#home"
-            >
-              {"Overview"}
-            </a>
-            <a
-              className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
-              data-path="projects"
-              href="#projects"
-            >
-              {"Case Studies"}
-            </a>
-            <a
-              className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
-              data-path="experience"
-              href="#experience"
-            >
-              {"Career"}
-            </a>
-            <a
-              className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
-              data-path="contact"
-              href="#contact"
-            >
-              {"Get in Touch"}
-            </a>
-          </div>
-          <div className="flex items-center gap-3 text-on-surface-variant font-label-code-sm text-label-code-sm">
-            <span className="">{"LATENCY: 24ms"}</span>
-            <span className="inline-block w-1 h-1 rounded-full bg-outline-variant"></span>
-            <span className="">{"© 2025 Haikal Tirta Albanna"}</span>
-          </div>
-        </div>
-      </footer>
+
 
       <div
         className="fixed inset-0 z-50 items-center justify-center bg-primary/70 backdrop-blur-md p-4 overflow-y-auto hidden"
@@ -2027,9 +1910,9 @@ export function PortfolioPage() {
             </Button>
           </div>
           <div className="p-6 lg:p-8 overflow-y-auto space-y-6">
-            <div className="flex flex-wrap items-center justify-between gap-4">
-              <div className="space-y-1">
-                <div className="flex items-center gap-2">
+            <div className="flex flex-col sm:flex-row items-start justify-between gap-4">
+              <div className="space-y-1 flex-1 min-w-0 pr-0 sm:pr-4">
+                <div className="flex flex-wrap items-center gap-2">
                   <span
                     id="pm-badge-type"
                     className="px-2.5 py-0.5 rounded font-label-code-sm text-label-code-sm font-semibold bg-surface-subtle text-primary border border-border-hairline"
@@ -2045,23 +1928,23 @@ export function PortfolioPage() {
                 </div>
                 <h2
                   id="pm-title"
-                  className="font-headline-md text-headline-md text-primary font-bold pt-1"
+                  className="font-headline-md text-headline-md text-primary font-bold pt-1 break-words"
                 >
                   {"Buku Agenda Surat Digital - Balai Pemasyarakatan OKU Induk"}
                 </h2>
               </div>
               <span
                 id="pm-period"
-                className="font-label-code-sm text-label-code-sm text-on-surface-variant bg-surface-subtle px-3 py-1.5 rounded-lg border border-border-hairline"
+                className="font-label-code-sm text-label-code-sm text-on-surface-variant bg-surface-subtle px-3 py-1.5 rounded-lg border border-border-hairline shrink-0 whitespace-nowrap self-start mt-1"
               >
-                {"DES 2024 - JUNI 2025"}
+                {"Desember 2025 – Juni 2026"}
               </span>
             </div>
-            <div className="w-full h-72 sm:h-80 rounded-xl overflow-hidden border border-border-hairline bg-surface-container relative">
+            <div className="w-full h-72 sm:h-96 rounded-xl overflow-hidden border border-border-hairline bg-surface-container relative flex items-center justify-center">
               <img
                 id="pm-image"
                 alt="Preview Proyek"
-                className="w-full h-full object-cover object-top"
+                className="w-full h-full object-contain p-2"
                 src="/project/buku-agenda.png"
               />
               <div className="absolute bottom-4 left-4 px-3 py-1.5 rounded-lg bg-surface-card/90 backdrop-blur border border-border-hairline text-primary font-label-code-sm text-xs font-semibold flex items-center gap-2">
@@ -2137,62 +2020,106 @@ export function PortfolioPage() {
               </h4>
               <div id="pm-tech-stack" className="grid grid-cols-2 sm:grid-cols-5 gap-3">
                 <div className="p-3 rounded-lg border border-border-hairline bg-surface-subtle flex items-center gap-2.5">
-                  <span className="material-symbols-outlined text-tech-badge-cyan text-xl">
-                    {"devices"}
-                  </span>
-                  <div>
-                    <span className="font-label-code-sm font-semibold text-primary block">
+                  <div className="shrink-0 flex items-center justify-center">
+                    <svg className="w-5 h-5 shrink-0" viewBox="0 0 115.3 100">
+                      <path
+                        d="M57.65 65.5A15.5 15.5 0 1 0 57.65 34.5A15.5 15.5 0 1 0 57.65 65.5Z"
+                        fill="#087ea4"
+                      ></path>
+                      <path
+                        d="M57.65 15C81 15 100 30.7 100 50C100 69.3 81 85 57.65 85C34.3 85 15.3 69.3 15.3 50C15.3 30.7 34.3 15 57.65 15Z"
+                        fill="none"
+                        stroke="#087ea4"
+                        strokeWidth="4.5"
+                      ></path>
+                      <path
+                        d="M57.65 15C81 15 100 30.7 100 50C100 69.3 81 85 57.65 85C34.3 85 15.3 69.3 15.3 50C15.3 30.7 34.3 15 57.65 15Z"
+                        fill="none"
+                        stroke="#087ea4"
+                        strokeWidth="4.5"
+                        transform="rotate(60 57.65 50)"
+                      ></path>
+                      <path
+                        d="M57.65 15C81 15 100 30.7 100 50C100 69.3 81 85 57.65 85C34.3 85 15.3 69.3 15.3 50C15.3 30.7 34.3 15 57.65 15Z"
+                        fill="none"
+                        stroke="#087ea4"
+                        strokeWidth="4.5"
+                        transform="rotate(120 57.65 50)"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div className="min-w-0">
+                    <span className="font-label-code-sm font-semibold text-primary block truncate">
                       {"React.js"}
                     </span>
-                    <span className="text-[10px] text-outline font-label-code-sm block">
+                    <span className="text-[10px] text-outline font-label-code-sm block truncate">
                       {"Frontend SPA"}
                     </span>
                   </div>
                 </div>
                 <div className="p-3 rounded-lg border border-border-hairline bg-surface-subtle flex items-center gap-2.5">
-                  <span className="material-symbols-outlined text-primary text-xl">{"code"}</span>
-                  <div>
-                    <span className="font-label-code-sm font-semibold text-primary block">
+                  <div className="shrink-0 flex items-center justify-center">
+                    <svg className="w-5 h-5 shrink-0 rounded" viewBox="0 0 128 128">
+                      <rect fill="#3178C6" height="128" width="128"></rect>
+                      <path
+                        d="M70.9 92.5c4.9 2.8 10.6 4.4 16.5 4.4 12.2 0 19.3-6.1 19.3-15.6 0-8.9-6-13.6-17.1-18.4l-5.6-2.5c-7.3-3.2-11.2-6.9-11.2-13.2 0-7.8 6.4-13.3 16.5-13.3 5.4 0 10.1 1.3 14.2 3.6l-3.3 10.6c-3.4-1.8-7.3-2.8-11.1-2.8-5.3 0-8.7 2.8-8.7 6.6 0 4.2 3.5 6.9 11.7 10.5l5.2 2.3c11 4.8 17.6 9.8 17.6 19.4 0 11.2-8.9 17.8-23.7 17.8-6.9 0-13.5-1.7-18.9-4.8l2.9-11.4zM24 45.4h37.7v11H43.9v48.1H29.8V56.4H24v-11z"
+                        fill="#fff"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div className="min-w-0">
+                    <span className="font-label-code-sm font-semibold text-primary block truncate">
                       {"TypeScript"}
                     </span>
-                    <span className="text-[10px] text-outline font-label-code-sm block">
+                    <span className="text-[10px] text-outline font-label-code-sm block truncate">
                       {"Type Safety"}
                     </span>
                   </div>
                 </div>
                 <div className="p-3 rounded-lg border border-border-hairline bg-surface-subtle flex items-center gap-2.5">
-                  <span className="material-symbols-outlined text-tech-badge-cyan text-xl">
-                    {"palette"}
-                  </span>
-                  <div>
-                    <span className="font-label-code-sm font-semibold text-primary block">
+                  <div className="shrink-0 flex items-center justify-center">
+                    <svg className="w-5 h-5 shrink-0" fill="#38bdf8" viewBox="0 0 24 24">
+                      <path d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"></path>
+                    </svg>
+                  </div>
+                  <div className="min-w-0">
+                    <span className="font-label-code-sm font-semibold text-primary block truncate">
                       {"Tailwind CSS"}
                     </span>
-                    <span className="text-[10px] text-outline font-label-code-sm block">
+                    <span className="text-[10px] text-outline font-label-code-sm block truncate">
                       {"Styling"}
                     </span>
                   </div>
                 </div>
                 <div className="p-3 rounded-lg border border-border-hairline bg-surface-subtle flex items-center gap-2.5">
-                  <span className="material-symbols-outlined text-secondary text-xl">{"dns"}</span>
-                  <div>
-                    <span className="font-label-code-sm font-semibold text-primary block">
+                  <div className="shrink-0 flex items-center justify-center">
+                    <svg className="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="#339933">
+                      <path d="M12 2L3 7.2v10.6L12 23l9-5.2V7.2L12 2zm6.7 14.5L12 20.3l-6.7-3.8V8.5L12 4.7l6.7 3.8v8z"></path>
+                    </svg>
+                  </div>
+                  <div className="min-w-0">
+                    <span className="font-label-code-sm font-semibold text-primary block truncate">
                       {"Node.js"}
                     </span>
-                    <span className="text-[10px] text-outline font-label-code-sm block">
+                    <span className="text-[10px] text-outline font-label-code-sm block truncate">
                       {"REST Service"}
                     </span>
                   </div>
                 </div>
                 <div className="p-3 rounded-lg border border-border-hairline bg-surface-subtle flex items-center gap-2.5">
-                  <span className="material-symbols-outlined text-secondary text-xl">
-                    {"database"}
-                  </span>
-                  <div>
-                    <span className="font-label-code-sm font-semibold text-primary block">
+                  <div className="shrink-0 flex items-center justify-center">
+                    <svg className="w-5 h-5 shrink-0" viewBox="0 0 128 128">
+                      <path
+                        fill="#00618A"
+                        d="M117.688 98.242c-6.973-.191-12.297.461-16.852 2.379-1.293.547-3.355.559-3.566 2.18.711.746.82 1.859 1.387 2.777 1.086 1.754 2.922 4.113 4.559 5.352 1.789 1.348 3.633 2.793 5.551 3.961 3.414 2.082 7.223 3.27 10.504 5.352 1.938 1.23 3.859 2.777 5.75 4.164.934.684 1.563 1.75 2.773 2.18v-.195c-.637-.812-.801-1.93-1.387-2.777l-2.578-2.578c-2.52-3.344-5.719-6.281-9.117-8.719-2.711-1.949-8.781-4.578-9.91-7.73l-.199-.199c1.922-.219 4.172-.914 5.949-1.391 2.98-.797 5.645-.59 8.719-1.387l4.164-1.187v-.793c-1.555-1.594-2.664-3.707-4.359-5.152-4.441-3.781-9.285-7.555-14.273-10.703-2.766-1.746-6.184-2.883-9.117-4.363-.988-.496-2.719-.758-3.371-1.586-1.539-1.961-2.379-4.449-3.566-6.738-2.488-4.793-4.93-10.023-7.137-15.066-1.504-3.437-2.484-6.828-4.359-9.91-9-14.797-18.687-23.73-33.695-32.508-3.195-1.867-7.039-2.605-11.102-3.57l-6.543-.395c-1.332-.555-2.715-2.184-3.965-2.977C16.977 3.52 4.223-3.312.539 5.672-1.785 11.34 4.016 16.871 6.09 19.746c1.457 2.012 3.32 4.273 4.359 6.539.688 1.492.805 2.984 1.391 4.559 1.438 3.883 2.695 8.109 4.559 11.695.941 1.816 1.98 3.727 3.172 5.352.727.996 1.98 1.438 2.18 2.973-1.227 1.715-1.297 4.375-1.984 6.543-3.098 9.77-1.926 21.91 2.578 29.137 1.383 2.223 4.641 6.98 9.117 5.156 3.918-1.598 3.043-6.539 4.164-10.902.254-.988.098-1.715.594-2.379v.199l3.57 7.133c2.641 4.254 7.324 8.699 11.297 11.699 2.059 1.555 3.68 4.242 6.344 5.152v-.199h-.199c-.516-.805-1.324-1.137-1.98-1.781-1.551-1.523-3.277-3.414-4.559-5.156-3.613-4.902-6.805-10.27-9.711-15.855-1.391-2.668-2.598-5.609-3.77-8.324-.453-1.047-.445-2.633-1.387-3.172-1.281 1.988-3.172 3.598-4.164 5.945-1.582 3.754-1.789 8.336-2.375 13.082-.348.125-.195.039-.398.199-2.762-.668-3.73-3.508-4.758-5.949-2.594-6.164-3.078-16.09-.793-23.191.59-1.836 3.262-7.617 2.18-9.316-.516-1.691-2.219-2.672-3.172-3.965-1.18-1.598-2.355-3.703-3.172-5.551-2.125-4.805-3.113-10.203-5.352-15.062-1.07-2.324-2.875-4.676-4.359-6.738-1.645-2.289-3.484-3.977-4.758-6.742-.453-.984-1.066-2.559-.398-3.566.215-.684.516-.969 1.191-1.191 1.148-.887 4.352.297 5.547.793 3.18 1.32 5.832 2.578 8.527 4.363 1.289.855 2.598 2.512 4.16 2.973h1.785c2.789.641 5.914.195 8.523.988 4.609 1.402 8.738 3.582 12.488 5.949 11.422 7.215 20.766 17.48 27.156 29.734 1.027 1.973 1.473 3.852 2.379 5.945 1.824 4.219 4.125 8.559 5.941 12.688 1.816 4.113 3.582 8.27 6.148 11.695 1.348 1.801 6.551 2.766 8.918 3.766 1.66.699 4.379 1.43 5.949 2.379 3 1.809 5.906 3.965 8.723 5.945 1.402.992 5.73 3.168 5.945 4.957zm-88.605-75.52c-1.453-.027-2.48.156-3.566.395v.199h.195c.695 1.422 1.918 2.34 2.777 3.566l1.98 4.164.199-.195c1.227-.867 1.789-2.25 1.781-4.363-.492-.52-.562-1.164-.992-1.785-.562-.824-1.66-1.289-2.375-1.98zm0 0"
+                      />
+                    </svg>
+                  </div>
+                  <div className="min-w-0">
+                    <span className="font-label-code-sm font-semibold text-primary block truncate">
                       {"MySQL"}
                     </span>
-                    <span className="text-[10px] text-outline font-label-code-sm block">
+                    <span className="text-[10px] text-outline font-label-code-sm block truncate">
                       {"ACID RDBMS"}
                     </span>
                   </div>
@@ -2200,39 +2127,32 @@ export function PortfolioPage() {
               </div>
             </div>
           </div>
-          <div className="px-6 py-4 border-t border-border-hairline bg-surface-subtle flex flex-wrap items-center justify-between gap-4">
-            <div className="text-xs font-label-code-sm text-outline">
-              {"Tekan "}
-              <kbd className="px-1.5 py-0.5 rounded bg-surface-card border border-border-hairline text-primary font-mono">
-                {"ESC"}
-              </kbd>
-              {" untuk menutup"}
-            </div>
-            <div className="flex items-center gap-3">
+          <div className="px-4 sm:px-6 py-4 border-t border-border-hairline bg-surface-subtle flex flex-col sm:flex-row items-stretch sm:items-center justify-center sm:justify-end gap-3">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
               <a
                 id="pm-demo-link"
-                className="inline-flex items-center gap-2 px-4 py-2 border border-border-hairline bg-surface-subtle hover:bg-surface-card rounded-lg font-body-sm text-body-sm font-medium text-primary transition-colors shadow-sm"
+                className="inline-flex items-center justify-center gap-2 px-4 py-2 border border-border-hairline bg-surface-subtle hover:bg-surface-card rounded-lg font-body-sm text-body-sm font-medium text-primary transition-colors shadow-sm whitespace-nowrap"
                 href="https://buku-agenda-xi.vercel.app/login"
                 rel="noreferrer"
                 target="_blank"
               >
-                <span className="material-symbols-outlined text-base text-secondary">{"open_in_new"}</span>
-                <span className="">{"Demo Proyek"}</span>
+                <span className="material-symbols-outlined text-base text-secondary shrink-0">{"open_in_new"}</span>
+                <span className="whitespace-nowrap">{"Demo Proyek"}</span>
               </a>
               <a
                 id="pm-github-link"
-                className="inline-flex items-center gap-2 px-4 py-2 border border-border-hairline bg-surface-card rounded-lg font-body-sm text-body-sm font-medium text-on-surface hover:bg-surface-subtle transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-4 py-2 border border-border-hairline bg-surface-card rounded-lg font-body-sm text-body-sm font-medium text-on-surface hover:bg-surface-subtle transition-colors whitespace-nowrap"
                 href="https://github.com/HaikalAlbanna/buku_agenda"
                 rel="noreferrer"
                 target="_blank"
               >
-                <span className="material-symbols-outlined text-base">{"code"}</span>
-                <span className="">{"Source Code GitHub"}</span>
+                <span className="material-symbols-outlined text-base shrink-0">{"code"}</span>
+                <span className="whitespace-nowrap">{"Source Code GitHub"}</span>
               </a>
               <Button
                 variant="portfolio"
                 size="reference"
-                className="px-4 py-2 rounded-lg border border-border-hairline bg-surface-card text-on-surface-variant hover:text-primary font-body-sm text-body-sm font-medium transition-colors"
+                className="px-4 py-2 rounded-lg border border-border-hairline bg-surface-card text-on-surface-variant hover:text-primary font-body-sm text-body-sm font-medium transition-colors whitespace-nowrap"
                 data-action="closeProjectModal()"
               >
                 {"Tutup"}
@@ -2266,8 +2186,8 @@ export function PortfolioPage() {
             </Button>
           </div>
           <div className="p-6 lg:p-8 overflow-y-auto space-y-6">
-            <div className="flex flex-wrap items-center justify-between gap-4">
-              <div className="space-y-1">
+            <div className="flex items-start justify-between gap-4">
+              <div className="space-y-1 flex-1 min-w-0 pr-4">
                 <div className="flex items-center gap-2">
                   <span
                     className="px-2.5 py-0.5 rounded font-label-code-sm text-label-code-sm font-semibold bg-surface-subtle text-primary border border-border-hairline"
@@ -2286,12 +2206,6 @@ export function PortfolioPage() {
                   {"Sertifikat Kelulusan Program MSIB Batch 6"}
                 </h2>
               </div>
-              <span
-                className="font-label-code-sm text-label-code-sm text-on-surface-variant bg-surface-subtle px-3 py-1.5 rounded-lg border border-border-hairline"
-                id="cert-modal-date"
-              >
-                {"Februari 2024 - Juni 2024"}
-              </span>
             </div>
             <div className="w-full h-80 sm:h-110 rounded-xl overflow-hidden border border-border-hairline bg-surface-container relative flex items-center justify-center">
               <img
@@ -2310,23 +2224,23 @@ export function PortfolioPage() {
               </div>
             </div>
             <div
-              className="flex items-center justify-between gap-4"
+              className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4"
               hidden={true}
               id="cert-modal-page-controls"
             >
               <Button
                 variant="portfolio"
                 size="reference"
-                className="inline-flex items-center gap-2 px-3 py-2 border border-border-hairline bg-surface-card text-on-surface hover:bg-surface-subtle"
+                className="inline-flex items-center justify-center gap-2 px-3 py-2 border border-border-hairline bg-surface-card text-on-surface hover:bg-surface-subtle whitespace-nowrap w-full sm:w-auto"
                 data-action="certificate-page-previous"
                 disabled={true}
                 id="cert-modal-page-previous"
               >
-                <span className="material-symbols-outlined text-base">{"chevron_left"}</span>
-                <span>{"Sebelumnya"}</span>
+                <span className="material-symbols-outlined text-base shrink-0">{"chevron_left"}</span>
+                <span className="whitespace-nowrap">{"Sebelumnya"}</span>
               </Button>
               <span
-                className="font-label-code-sm text-label-code-sm text-on-surface-variant"
+                className="font-label-code-sm text-label-code-sm text-on-surface-variant whitespace-nowrap"
                 id="cert-modal-page-count"
               >
                 {"Halaman 1 dari 1"}
@@ -2334,38 +2248,31 @@ export function PortfolioPage() {
               <Button
                 variant="portfolio"
                 size="reference"
-                className="inline-flex items-center gap-2 px-3 py-2 border border-border-hairline bg-surface-card text-on-surface hover:bg-surface-subtle"
+                className="inline-flex items-center justify-center gap-2 px-3 py-2 border border-border-hairline bg-surface-card text-on-surface hover:bg-surface-subtle whitespace-nowrap w-full sm:w-auto"
                 data-action="certificate-page-next"
                 id="cert-modal-page-next"
               >
-                <span>{"Berikutnya"}</span>
-                <span className="material-symbols-outlined text-base">{"chevron_right"}</span>
+                <span className="whitespace-nowrap">{"Berikutnya"}</span>
+                <span className="material-symbols-outlined text-base shrink-0">{"chevron_right"}</span>
               </Button>
             </div>
           </div>
-          <div className="px-6 py-4 border-t border-border-hairline bg-surface-subtle flex flex-wrap items-center justify-between gap-4">
-            <div className="text-xs font-label-code-sm text-outline">
-              {"Tekan "}
-              <kbd className="px-1.5 py-0.5 rounded bg-surface-card border border-border-hairline text-primary font-mono">
-                {"ESC"}
-              </kbd>
-              {" untuk menutup"}
-            </div>
-            <div className="flex items-center gap-3">
+          <div className="px-4 sm:px-6 py-4 border-t border-border-hairline bg-surface-subtle flex flex-col sm:flex-row items-stretch sm:items-center justify-center sm:justify-end gap-3">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
               <a
-                className="inline-flex items-center gap-2 px-4 py-2 border border-border-hairline bg-surface-card rounded-lg font-body-sm text-body-sm font-medium text-on-surface hover:bg-surface-subtle transition-colors shadow-sm"
+                className="inline-flex items-center justify-center gap-2 px-4 py-2 border border-border-hairline bg-surface-card rounded-lg font-body-sm text-body-sm font-medium text-on-surface hover:bg-surface-subtle transition-colors shadow-sm whitespace-nowrap"
                 href="#"
                 id="cert-modal-download"
                 rel="noreferrer"
                 target="_blank"
               >
-                <span className="material-symbols-outlined text-base text-secondary">{"open_in_new"}</span>
-                <span className="cert-modal-download-text">{"Buka Gambar Asli"}</span>
+                <span className="material-symbols-outlined text-base text-secondary shrink-0">{"open_in_new"}</span>
+                <span className="cert-modal-download-text whitespace-nowrap">{"Buka Gambar Asli"}</span>
               </a>
               <Button
                 variant="portfolio"
                 size="reference"
-                className="px-5 py-2 rounded-lg bg-primary hover:bg-primary-container font-body-sm text-body-sm font-medium transition-colors shadow-sm text-on-primary"
+                className="px-5 py-2 rounded-lg bg-primary hover:bg-primary-container font-body-sm text-body-sm font-medium transition-colors shadow-sm text-on-primary whitespace-nowrap"
                 data-action="closeCertModal()"
               >
                 {"Tutup"}

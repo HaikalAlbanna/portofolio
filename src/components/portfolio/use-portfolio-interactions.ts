@@ -36,7 +36,6 @@ const translations: Record<string, string> = {
   // Section 01: About
   "01. TENTANG SAYA": "01. ABOUT ME",
   "TENTANG SAYA": "ABOUT ME",
-  "Mengubah ide menjadi aplikasi yang bermanfaat.": "Turning ideas into useful applications.",
   "Latar Belakang & Filosofi Rekayasa": "Background & Engineering Philosophy",
   "Saya adalah lulusan Sarjana Komputer (S1) Teknik Informatika dari": "I am a Computer Science graduate (B.Sc) in Informatics Engineering from",
   "Universitas Bina Darma": "Bina Darma University",
@@ -57,7 +56,6 @@ const translations: Record<string, string> = {
   // Section 02: Skills
   "02. KEAHLIAN TEKNOLOGI & TECH ARSENAL": "02. CORE SKILLS & TECH ARSENAL",
   "KEAHLIAN TEKNOLOGI & TECH ARSENAL": "CORE SKILLS & TECH ARSENAL",
-  "Perangkat & disiplin yang saya kuasai.": "Tools & engineering disciplines I master.",
   "Antarmuka web interaktif & responsif": "Interactive & responsive web interfaces",
   "8 TEKNOLOGI": "8 TECHNOLOGIES",
   "Arsitektur Server & Basis Data Relasional": "Server Architecture & Relational Databases",
@@ -79,8 +77,6 @@ const translations: Record<string, string> = {
   "PORTOFOLIO PROYEK": "PROJECT PORTFOLIO",
   "PROYEK UNGGULAN": "FEATURED PROJECTS",
   "Proyek Unggulan & Implementasi": "Featured Projects & Implementations",
-  "Implementasi nyata penyelesaian masalah data & transformasi digital instansi.": "Real-world solutions for data challenges and institutional digital transformation.",
-  "Rancang bangun sistem enterprise, otomatisasi administrasi instansi, dan arsitektur analitik cloud berkinerja tinggi.": "Enterprise system design, institutional administrative automation, and high-performance cloud analytics architecture.",
   "Semua Proyek": "All Projects",
   "Sistem Internal": "Internal Systems",
   "Aplikasi Web": "Web Applications",
@@ -98,8 +94,6 @@ const translations: Record<string, string> = {
   "PENGALAMAN KERJA & KONTRIBUSI": "WORK EXPERIENCE & CONTRIBUTIONS",
   "PENGALAMAN KERJA": "WORK EXPERIENCE",
   "Pengalaman Profesional & Proyek Institusi": "Professional Experience & Institutional Projects",
-  "Jejak rekam profesional dan kontribusi nyata": "Professional track record and real contributions",
-  "Pengalaman langsung pada instansi pemerintah dan program akselerasi teknologi nasional.": "Hands-on experience in government institutions and national technology acceleration programs.",
   "DESEMBER 2025 — JUNI 2026": "DECEMBER 2025 — JUNE 2026",
   "Pengelola Fasilitas Umum": "Public Facilities Officer",
   "BAPAS Kelas II OKU Induk": "BAPAS Class II OKU Induk",
@@ -129,8 +123,6 @@ const translations: Record<string, string> = {
   "SERTIFIKASI & KREDENSIAL RESMI": "OFFICIAL CERTIFICATIONS & CREDENTIALS",
   "SERTIFIKAT & LISENSI": "CERTIFICATES & LICENSES",
   "Lisensi Profesional & Sertifikasi Keahlian": "Professional Licenses & Skill Certifications",
-  "Dokumentasi pencapaian kompetensi & kelulusan program terstandarisasi.": "Documentation of competency achievements & standardized program graduations.",
-  "Portofolio lisensi, kredensial kementerian, dan kelulusan program akselerasi digital bereputasi nasional.": "Portfolio of licenses, ministry credentials, and nationally reputable digital acceleration program graduations.",
   "Surat Pengalaman Magang": "Internship Experience Certificate",
   "Surat keterangan pengalaman magang di Balai Pemasyarakatan Kelas II OKU Induk. Dokumen lengkap terdiri dari dua halaman.": "Certificate of internship experience at Balai Pemasyarakatan Class II OKU Induk. Full document consists of two pages.",
   "Sertifikat MagangHub 2026": "MagangHub Certificate 2026",
@@ -151,7 +143,6 @@ const translations: Record<string, string> = {
   // Section 06: Contact
   "06. MARI BERKOLABORASI": "06. LET'S COLLABORATE",
   "MARI BERKOLABORASI": "LET'S COLLABORATE",
-  "Terbuka untuk peluang kerja full-time, kontrak, maupun kemitraan proyek sistem.": "Open for full-time roles, contracts, and system project partnerships.",
   "Kirim Pesan Langsung": "Send a Direct Message",
   "Silakan isi formulir di bawah ini untuk memulai percakapan atau mendiskusikan peluang kerja sama.": "Please fill out the form below to start a conversation or discuss work opportunities.",
   "SURAT ELEKTRONIK UTAMA": "PRIMARY EMAIL",
@@ -198,6 +189,35 @@ const dateMonthReplacements: [RegExp, string][] = [
   [/\bOKTOBER\b/g, "OCTOBER"],
   [/\bMEI\b/g, "MAY"],
 ];
+
+const techIconSvgs: Record<string, string> = {
+  "react.js": `<svg class="w-5 h-5 shrink-0" viewBox="0 0 115.3 100"><path d="M57.65 65.5A15.5 15.5 0 1 0 57.65 34.5A15.5 15.5 0 1 0 57.65 65.5Z" fill="#087ea4"/><path d="M57.65 15C81 15 100 30.7 100 50C100 69.3 81 85 57.65 85C34.3 85 15.3 69.3 15.3 50C15.3 30.7 34.3 15 57.65 15Z" fill="none" stroke="#087ea4" stroke-width="4.5"/><path d="M57.65 15C81 15 100 30.7 100 50C100 69.3 81 85 57.65 85C34.3 85 15.3 69.3 15.3 50C15.3 30.7 34.3 15 57.65 15Z" fill="none" stroke="#087ea4" stroke-width="4.5" transform="rotate(60 57.65 50)"/><path d="M57.65 15C81 15 100 30.7 100 50C100 69.3 81 85 57.65 85C34.3 85 15.3 69.3 15.3 50C15.3 30.7 34.3 15 57.65 15Z" fill="none" stroke="#087ea4" stroke-width="4.5" transform="rotate(120 57.65 50)"/></svg>`,
+  "react": `<svg class="w-5 h-5 shrink-0" viewBox="0 0 115.3 100"><path d="M57.65 65.5A15.5 15.5 0 1 0 57.65 34.5A15.5 15.5 0 1 0 57.65 65.5Z" fill="#087ea4"/><path d="M57.65 15C81 15 100 30.7 100 50C100 69.3 81 85 57.65 85C34.3 85 15.3 69.3 15.3 50C15.3 30.7 34.3 15 57.65 15Z" fill="none" stroke="#087ea4" stroke-width="4.5"/><path d="M57.65 15C81 15 100 30.7 100 50C100 69.3 81 85 57.65 85C34.3 85 15.3 69.3 15.3 50C15.3 30.7 34.3 15 57.65 15Z" fill="none" stroke="#087ea4" stroke-width="4.5" transform="rotate(60 57.65 50)"/><path d="M57.65 15C81 15 100 30.7 100 50C100 69.3 81 85 57.65 85C34.3 85 15.3 69.3 15.3 50C15.3 30.7 34.3 15 57.65 15Z" fill="none" stroke="#087ea4" stroke-width="4.5" transform="rotate(120 57.65 50)"/></svg>`,
+  "typescript": `<svg class="w-5 h-5 shrink-0 rounded" viewBox="0 0 128 128"><rect fill="#3178C6" height="128" width="128"/><path d="M70.9 92.5c4.9 2.8 10.6 4.4 16.5 4.4 12.2 0 19.3-6.1 19.3-15.6 0-8.9-6-13.6-17.1-18.4l-5.6-2.5c-7.3-3.2-11.2-6.9-11.2-13.2 0-7.8 6.4-13.3 16.5-13.3 5.4 0 10.1 1.3 14.2 3.6l-3.3 10.6c-3.4-1.8-7.3-2.8-11.1-2.8-5.3 0-8.7 2.8-8.7 6.6 0 4.2 3.5 6.9 11.7 10.5l5.2 2.3c11 4.8 17.6 9.8 17.6 19.4 0 11.2-8.9 17.8-23.7 17.8-6.9 0-13.5-1.7-18.9-4.8l2.9-11.4zM24 45.4h37.7v11H43.9v48.1H29.8V56.4H24v-11z" fill="#fff"/></svg>`,
+  "javascript": `<svg class="w-5 h-5 shrink-0 rounded" viewBox="0 0 630 630"><rect fill="#F7DF1E" height="630" width="630"/><path d="m165.65 526.4c21.21 12.02 43.7 21.32 70.4 21.32 41.08 0 66.82-18.42 66.82-58.43v-237.5h-50.04v238.6c0 23.36-12.82 34.6-34.6 34.6-17.67 0-31.2-7.07-40.42-14.77zm198.8 18.42c26.16 14.15 60.1 22.98 90.5 22.98 52.34 0 86.27-25.1 86.27-69.65 0-38.2-22.63-57.65-64.35-75.32l-15.56-6.36c-24.04-10.25-37.47-18.38-37.47-34.65 0-14.5 11.31-25.1 31.82-25.1 19.1 0 32.53 6.72 41.72 13.08l17.68-29.7c-13.8-9.9-34.3-17.3-59.4-17.3-50.2 0-80.6 27.2-80.6 67.2 0 37.1 22.6 57.3 60.8 73.2l15.56 6.72c26.17 11.31 39.95 20.15 39.95 37.83 0 17.32-14.5 27.23-38.54 27.23-26.17 0-44.55-10.6-56.9-19.8z"/></svg>`,
+  "tailwind css": `<svg class="w-5 h-5 shrink-0" fill="#38bdf8" viewBox="0 0 24 24"><path d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"></path></svg>`,
+  "tailwind": `<svg class="w-5 h-5 shrink-0" fill="#38bdf8" viewBox="0 0 24 24"><path d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"></path></svg>`,
+  "node.js": `<svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="#339933"><path d="M12 2L3 7.2v10.6L12 23l9-5.2V7.2L12 2zm6.7 14.5L12 20.3l-6.7-3.8V8.5L12 4.7l6.7 3.8v8z"/></svg>`,
+  "mysql": `<svg class="w-5 h-5 shrink-0" viewBox="0 0 128 128"><path fill="#00618A" d="M117.688 98.242c-6.973-.191-12.297.461-16.852 2.379-1.293.547-3.355.559-3.566 2.18.711.746.82 1.859 1.387 2.777 1.086 1.754 2.922 4.113 4.559 5.352 1.789 1.348 3.633 2.793 5.551 3.961 3.414 2.082 7.223 3.27 10.504 5.352 1.938 1.23 3.859 2.777 5.75 4.164.934.684 1.563 1.75 2.773 2.18v-.195c-.637-.812-.801-1.93-1.387-2.777l-2.578-2.578c-2.52-3.344-5.719-6.281-9.117-8.719-2.711-1.949-8.781-4.578-9.91-7.73l-.199-.199c1.922-.219 4.172-.914 5.949-1.391 2.98-.797 5.645-.59 8.719-1.387l4.164-1.187v-.793c-1.555-1.594-2.664-3.707-4.359-5.152-4.441-3.781-9.285-7.555-14.273-10.703-2.766-1.746-6.184-2.883-9.117-4.363-.988-.496-2.719-.758-3.371-1.586-1.539-1.961-2.379-4.449-3.566-6.738-2.488-4.793-4.93-10.023-7.137-15.066-1.504-3.437-2.484-6.828-4.359-9.91-9-14.797-18.687-23.73-33.695-32.508-3.195-1.867-7.039-2.605-11.102-3.57l-6.543-.395c-1.332-.555-2.715-2.184-3.965-2.977C16.977 3.52 4.223-3.312.539 5.672-1.785 11.34 4.016 16.871 6.09 19.746c1.457 2.012 3.32 4.273 4.359 6.539.688 1.492.805 2.984 1.391 4.559 1.438 3.883 2.695 8.109 4.559 11.695.941 1.816 1.98 3.727 3.172 5.352.727.996 1.98 1.438 2.18 2.973-1.227 1.715-1.297 4.375-1.984 6.543-3.098 9.77-1.926 21.91 2.578 29.137 1.383 2.223 4.641 6.98 9.117 5.156 3.918-1.598 3.043-6.539 4.164-10.902.254-.988.098-1.715.594-2.379v.199l3.57 7.133c2.641 4.254 7.324 8.699 11.297 11.699 2.059 1.555 3.68 4.242 6.344 5.152v-.199h-.199c-.516-.805-1.324-1.137-1.98-1.781-1.551-1.523-3.277-3.414-4.559-5.156-3.613-4.902-6.805-10.27-9.711-15.855-1.391-2.668-2.598-5.609-3.77-8.324-.453-1.047-.445-2.633-1.387-3.172-1.281 1.988-3.172 3.598-4.164 5.945-1.582 3.754-1.789 8.336-2.375 13.082-.348.125-.195.039-.398.199-2.762-.668-3.73-3.508-4.758-5.949-2.594-6.164-3.078-16.09-.793-23.191.59-1.836 3.262-7.617 2.18-9.316-.516-1.691-2.219-2.672-3.172-3.965-1.18-1.598-2.355-3.703-3.172-5.551-2.125-4.805-3.113-10.203-5.352-15.062-1.07-2.324-2.875-4.676-4.359-6.738-1.645-2.289-3.484-3.977-4.758-6.742-.453-.984-1.066-2.559-.398-3.566.215-.684.516-.969 1.191-1.191 1.148-.887 4.352.297 5.547.793 3.18 1.32 5.832 2.578 8.527 4.363 1.289.855 2.598 2.512 4.16 2.973h1.785c2.789.641 5.914.195 8.523.988 4.609 1.402 8.738 3.582 12.488 5.949 11.422 7.215 20.766 17.48 27.156 29.734 1.027 1.973 1.473 3.852 2.379 5.945 1.824 4.219 4.125 8.559 5.941 12.688 1.816 4.113 3.582 8.27 6.148 11.695 1.348 1.801 6.551 2.766 8.918 3.766 1.66.699 4.379 1.43 5.949 2.379 3 1.809 5.906 3.965 8.723 5.945 1.402.992 5.73 3.168 5.945 4.957zm-88.605-75.52c-1.453-.027-2.48.156-3.566.395v.199h.195c.695 1.422 1.918 2.34 2.777 3.566l1.98 4.164.199-.195c1.227-.867 1.789-2.25 1.781-4.363-.492-.52-.562-1.164-.992-1.785-.562-.824-1.66-1.289-2.375-1.98zm0 0"/></svg>`,
+  "supabase / sql": `<svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="#3ECF8E"><path d="M21.362 9.354H12V.396a.396.396 0 0 0-.716-.233L2.21 12.604a.396.396 0 0 0 .316.642H12v8.958a.396.396 0 0 0 .716.233l9.074-12.441a.396.396 0 0 0-.316-.642z"/></svg>`,
+  "supabase": `<svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="#3ECF8E"><path d="M21.362 9.354H12V.396a.396.396 0 0 0-.716-.233L2.21 12.604a.396.396 0 0 0 .316.642H12v8.958a.396.396 0 0 0 .716.233l9.074-12.441a.396.396 0 0 0-.316-.642z"/></svg>`,
+  "css": `<svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24"><path d="M3 2l1.8 20.2 7.2 2 7.2-2L21 2H3z" fill="#1572B6"/><path d="M12 22.1l5.7-1.6 1.5-16.5H12v18.1z" fill="#33A9DC"/><path d="M12 11.2h3.7l.3-3.2H8.3l-.3 2.7h7.8l-.3 3.2H8.3l.2 2.7h7.6l-.3 3.3-3.8 1-3.8-1-.2-2.3H6.2l.4 4.5 5.4 1.5 5.4-1.5 1-11H8.6l.2-2.2H12v-3.4z" fill="#fff"/></svg>`,
+};
+
+const getTechIconSvg = (name: string): string | null => {
+  const clean = name.toLowerCase().trim();
+  if (techIconSvgs[clean]) return techIconSvgs[clean] ?? null;
+  if (clean.includes("react")) return techIconSvgs["react.js"] ?? null;
+  if (clean.includes("typescript")) return techIconSvgs["typescript"] ?? null;
+  if (clean.includes("javascript")) return techIconSvgs["javascript"] ?? null;
+  if (clean.includes("tailwind")) return techIconSvgs["tailwind css"] ?? null;
+  if (clean.includes("supabase")) return techIconSvgs["supabase / sql"] ?? null;
+  if (clean.includes("mysql")) return techIconSvgs["mysql"] ?? null;
+  if (clean.includes("sql")) return techIconSvgs["supabase / sql"] ?? null;
+  if (clean.includes("node")) return techIconSvgs["node.js"] ?? null;
+  if (clean.includes("css")) return techIconSvgs["css"] ?? null;
+  return null;
+};
 
 export function usePortfolioInteractions(container: RefObject<HTMLDivElement | null>) {
   useEffect(() => {
@@ -383,7 +403,7 @@ export function usePortfolioInteractions(container: RefObject<HTMLDivElement | n
 
         const viewBtnText = card.querySelector<HTMLElement>('[data-action="openCertModal"] span:first-child');
         if (viewBtnText) {
-          viewBtnText.textContent = currentLang === "en" ? "View Full Document" : "Lihat Dokumen Lengkap";
+          viewBtnText.textContent = card.dataset["buttonText"] || (currentLang === "en" ? "View Full Document" : "Lihat Dokumen Lengkap");
         }
       });
 
@@ -578,13 +598,49 @@ export function usePortfolioInteractions(container: RefObject<HTMLDivElement | n
 
       const tech = q("#pm-tech-stack");
       if (tech) {
+        tech.className =
+          d.tech.length <= 4
+            ? "grid grid-cols-2 sm:grid-cols-4 gap-3"
+            : "grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3";
         tech.replaceChildren(
           ...d.tech.map((t) => {
             const el = document.createElement("div");
             el.className =
-              "p-3 rounded-lg border border-border-hairline bg-surface-subtle font-label-code-sm text-label-code-sm";
+              "p-3 rounded-lg border border-border-hairline bg-surface-subtle flex items-center gap-2.5";
             const role = isEn ? (t.roleEn || t.role) : t.role;
-            el.textContent = t.name + " · " + role;
+            const lowerName = t.name.toLowerCase().trim();
+
+            const iconWrap = document.createElement("div");
+            iconWrap.className = "shrink-0 flex items-center justify-center";
+            const svgMarkup = getTechIconSvg(t.name);
+            if (svgMarkup) {
+              iconWrap.innerHTML = svgMarkup;
+            } else {
+              const iconSpan = document.createElement("span");
+              const iconName =
+                lowerName === "json"
+                  ? "data_object"
+                  : lowerName === "aos"
+                    ? "animation"
+                    : t.icon || "code";
+              iconSpan.className = "material-symbols-outlined text-secondary text-xl";
+              iconSpan.textContent = iconName;
+              iconWrap.appendChild(iconSpan);
+            }
+
+            const textWrap = document.createElement("div");
+            textWrap.className = "min-w-0";
+            const nameSpan = document.createElement("span");
+            nameSpan.className = "font-label-code-sm font-semibold text-primary block leading-tight text-xs";
+            nameSpan.textContent = t.name;
+            const roleSpan = document.createElement("span");
+            roleSpan.className = "text-[10px] text-outline font-label-code-sm block truncate mt-0.5";
+            roleSpan.textContent = role;
+            textWrap.appendChild(nameSpan);
+            textWrap.appendChild(roleSpan);
+
+            el.appendChild(iconWrap);
+            el.appendChild(textWrap);
             return el;
           }),
         );
@@ -669,8 +725,7 @@ export function usePortfolioInteractions(container: RefObject<HTMLDivElement | n
         const secondPage = preview?.dataset["certImageTwo"] || "";
         const title = card?.querySelector("h3")?.textContent?.trim() || (currentLang === "en" ? "Certificate Document" : "Dokumen Sertifikat");
         const issuer =
-          card?.querySelector(".certificate-issuer, div.text-secondary")?.textContent?.trim() || "";
-        const date = card?.querySelector(".certificate-date")?.textContent?.trim() || "";
+          card?.querySelector(".certificate-issuer")?.textContent?.trim() || "";
 
         certificateTitle = title;
         certificatePages = [imageUrl, secondPage].filter((pageUrl) => Boolean(pageUrl));
@@ -678,7 +733,6 @@ export function usePortfolioInteractions(container: RefObject<HTMLDivElement | n
 
         setText("cert-modal-title", title);
         setText("cert-modal-issuer", issuer);
-        setText("cert-modal-date", date);
         setText(
           "cert-modal-cred",
           certificatePages.length > 1
@@ -714,6 +768,9 @@ export function usePortfolioInteractions(container: RefObject<HTMLDivElement | n
         translateDocumentText(isEnglish);
         renderProjects();
         renderCertificates();
+        if (activeModalProjectId) {
+          updateProjectModalContent(activeModalProjectId);
+        }
 
         all('[data-action^="language-"]').forEach((el) => {
           const isSelected = el.dataset["action"] === action;
