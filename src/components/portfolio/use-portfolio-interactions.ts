@@ -437,7 +437,7 @@ export function usePortfolioInteractions(container: RefObject<HTMLDivElement | n
       );
       const download = q<HTMLAnchorElement>("#cert-modal-download");
       if (download) {
-        download.href = `/certificate-view.html?file=${encodeURIComponent(pageUrl)}&title=${encodeURIComponent(certificateTitle)}`;
+        download.href = pageUrl;
         const iconSpan = download.querySelector(".material-symbols-outlined");
         if (iconSpan) {
           iconSpan.textContent = "open_in_new";
