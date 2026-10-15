@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pratinjau Sertifikat | Haikal Tirta Albanna</title>
+  <link rel="icon" type="image/png" href="/icon-icons.png">
+  <link rel="shortcut icon" type="image/png" href="/icon-icons.png">
+  <link rel="apple-touch-icon" href="/icon-icons.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html, body {
+      width: 100%;
+      height: 100%;
+      background-color: #0c0f17;
+      color: #f1f5f9;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      overflow: hidden;
+    }
+    .app {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      width: 100vw;
+    }
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+      padding: 0 16px;
+      background: rgba(15, 23, 42, 0.95);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(12px);
+      z-index: 20;
+    }
+    .brand-section {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+    .brand-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+    .doc-info {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+    .doc-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #f8fafc;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 50vw;
+    }
+    .doc-sub {
+      font-size: 11px;
+      color: #94a3b8;
+    }
+    .actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      font-size: 12px;
+      font-weight: 500;
+      border-radius: 6px;
+      text-decoration: none;
+      color: #e2e8f0;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      cursor: pointer;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .btn:hover {
+      background: rgba(255, 255, 255, 0.12);
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+    .btn-primary {
+      background: #2563eb;
+      border-color: #3b82f6;
+      color: #ffffff;
+    }
+    .btn-primary:hover {
+      background: #1d4ed8;
+      border-color: #2563eb;
+    }
+    .viewer {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      overflow: auto;
+      position: relative;
+      background: radial-gradient(circle at center, #171f30 0%, #0c0f17 100%);
+    }
+    .viewer.zoomed {
+      display: block;
+      padding: 20px;
+    }
+    .cert-image {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+      cursor: zoom-in;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      user-select: none;
+    }
+    .viewer.zoomed .cert-image {
+      max-width: none;
+      max-height: none;
+      width: auto;
+      height: auto;
+      display: block;
+      margin: auto;
+      cursor: zoom-out;
+    }
+    .hint {
+      position: absolute;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 11px;
+      color: #94a3b8;
+      pointer-events: none;
+      backdrop-filter: blur(8px);
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand-section">
+        <img class="brand-icon" src="/icon-icons.png" alt="Icon">
+        <div class="doc-info">
+          <span class="doc-title" id="certTitle">Memuat dokumen...</span>
+          <span class="doc-sub">Haikal Tirta Albanna &bull; Dokumen Sertifikat</span>
+        </div>
+      </div>
+      <div class="actions">
+        <a class="btn" id="rawLink" href="#" target="_blank" rel="noreferrer">
+          Buka File Asli
+        </a>
+        <a class="btn btn-primary" id="downloadBtn" href="#" download>
+          Unduh
+        </a>
+      </div>
+    </header>
+    <main class="viewer" id="viewer">
+      <img class="cert-image" id="certImage" alt="Sertifikat Preview" src="">
+      <div class="hint" id="hint">Klik gambar untuk memperbesar / memperkecil</div>
+    </main>
+  </div>
+
+  <script>
+    (function() {
+      const params = new URLSearchParams(window.location.search);
+      const fileUrl = params.get('file') || '';
+      const title = params.get('title') || 'Dokumen Sertifikat';
+
+      if (title) {
+        document.title = title + ' | Haikal Tirta Albanna';
+        const titleEl = document.getElementById('certTitle');
+        if (titleEl) titleEl.textContent = title;
+      }
+
+      const imgEl = document.getElementById('certImage');
+      const rawLinkEl = document.getElementById('rawLink');
+      const downloadBtnEl = document.getElementById('downloadBtn');
+
+      if (fileUrl) {
+        if (imgEl) {
+          imgEl.src = fileUrl;
+          imgEl.alt = title;
+        }
+        if (rawLinkEl) rawLinkEl.href = fileUrl;
+        if (downloadBtnEl) {
+          downloadBtnEl.href = fileUrl;
+          const ext = fileUrl.split('.').pop().split('?')[0] || 'jpg';
+          downloadBtnEl.download = title + '.' + ext;
+        }
+      }
+
+      const viewer = document.getElementById('viewer');
+      if (imgEl && viewer) {
+        imgEl.addEventListener('click', function(e) {
+          e.stopPropagation();
+          viewer.classList.toggle('zoomed');
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

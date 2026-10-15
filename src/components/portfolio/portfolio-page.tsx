@@ -127,15 +127,6 @@ export function PortfolioPage() {
           <section className="w-full py-16 lg:py-24 max-w-7xl mx-auto px-6 lg:px-12" id="home">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
               <div className="lg:col-span-7 flex flex-col items-start gap-6">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded border border-border-hairline bg-surface-subtle font-label-code-sm text-label-code-sm">
-                  <span className="material-symbols-outlined text-secondary text-sm">{"work"}</span>
-                  <span className="text-primary font-semibold tracking-tight uppercase">
-                    {"STATUS: AVAILABLE FOR WORK"}
-                  </span>
-                  <span className="text-outline-variant">{"—"}</span>
-                  <span className="text-on-surface-variant font-normal">{"PALEMBANG, ID"}</span>
-                </div>
-
                 <div className="flex items-center gap-2 text-secondary font-label-code-md text-label-code-md tracking-wider uppercase font-semibold">
                   <span className="text-outline-variant">{">"}</span>
                   <span className="">{"FULL-STACK DEVELOPER & DATA ANALYST"}</span>
