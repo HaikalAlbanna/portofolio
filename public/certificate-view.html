@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dokumen Sertifikat | Haikal Tirta Albanna</title>
+  <link rel="icon" type="image/png" href="/icon-icons.png">
+  <link rel="shortcut icon" type="image/png" href="/icon-icons.png">
+  <link rel="apple-touch-icon" href="/icon-icons.png">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html, body {
+      width: 100%;
+      height: 100%;
+      background-color: #0c0f17;
+      overflow: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .image-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      cursor: zoom-in;
+    }
+    .image-container.zoomed {
+      display: block;
+      padding: 0;
+      cursor: zoom-out;
+    }
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      user-select: none;
+      display: block;
+      margin: auto;
+      transition: transform 0.15s ease;
+    }
+    .image-container.zoomed img {
+      max-width: none;
+      max-height: none;
+      width: auto;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="image-container" id="container">
+    <img id="certImg" src="" alt="Dokumen Sertifikat">
+  </div>
+
+  <script>
+    (function() {
+      const params = new URLSearchParams(window.location.search);
+      const fileUrl = params.get('file');
+      const title = params.get('title');
+
+      if (title) {
+        document.title = title + ' | Haikal Tirta Albanna';
+      }
+
+      const img = document.getElementById('certImg');
+      const container = document.getElementById('container');
+
+      if (fileUrl) {
+        img.src = fileUrl;
+        if (title) img.alt = title;
+      } else {
+        window.location.replace('/');
+      }
+
+      if (container && img) {
+        container.addEventListener('click', function() {
+          container.classList.toggle('zoomed');
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
